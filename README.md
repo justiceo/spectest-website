@@ -1,83 +1,76 @@
-# Hextra Starter Template
+# Spectest Documentation
 
-[![Deploy Hugo site to Pages](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml/badge.svg)](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6e83fd88-5ffe-4808-9689-c0f3b100bfe3/deploy-status)](https://app.netlify.com/sites/hextra-starter-template/deploys)
-![Vercel Deployment Status](https://img.shields.io/github/deployments/imfing/hextra-starter-template/production?logo=vercel&logoColor=white&label=vercel&labelColor=black&link=https%3A%2F%2Fhextra-starter-template.vercel.app%2F)
+This repository contains the official documentation for [Spectest](https://github.com/justiceo/spectest), a lightning-fast and declarative API testing tool.
 
+## About Spectest
 
-🐣 Minimal template for getting started with [Hextra](https://github.com/imfing/hextra)
+Spectest is an open-source CLI tool for declarative HTTP API testing that allows you to write tests in JavaScript or JSON without boilerplate code. It's designed to be fast, focused, and developer-friendly.
 
-![hextra-template](https://github.com/imfing/hextra-starter-template/assets/5097752/c403b9a9-a76c-47a6-8466-513d772ef0b7)
+### Key Features
 
-[🌐 Demo ↗](https://imfing.github.io/hextra-starter-template/)
+- ⚡ **Fast Execution**: Execute hundreds of tests in seconds with parallel execution
+- 📝 **Truly Declarative**: Write tests in JavaScript or JSON - no boilerplate, just describe what you expect
+- 🎯 **Focused Workflow**: Built specifically for API testing with smart defaults and intuitive syntax
+- 🔧 **Easy Integration**: Works with existing development workflows and CI/CD pipelines
 
-## Quick Start
+## Documentation Site
 
-Use this template to create your own repository:
+This repository contains the documentation site built with [Hugo](https://gohugo.io/) using the [Hextra](https://github.com/imfing/hextra) theme. The site provides comprehensive guides, API references, and examples for using Spectest.
 
-<img src="https://docs.github.com/assets/cb-77734/mw-1440/images/help/repository/use-this-template-button.webp" width=400 />
+### Live Site
 
-You can also quickly start developing using the following online development environment:
-
-- [GitHub Codespaces](https://github.com/codespaces) 
-    
-    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/imfing/hextra-starter-template)
-
-    Create a new codespace and follow the [Local Development](#local-development) to launch the preview
-
-- [Gitpod](https://gitpod.io)
-
-    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/imfing/hextra-starter-template)
-
-
-## Deployment
-
-### GitHub Pages
-
-A GitHub Actions workflow is provided in [`.github/workflows/pages.yaml`](./.github/workflows/pages.yaml) to [publish to GitHub Pages](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/) for free. 
-
-For details, see [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
-
-Note: in the settings, make sure to set the Pages deployment source to **GitHub Actions**:
-
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/99676430-884e-42ab-b901-f6534a0d6eee" width=600 />
-
-[Run the workflow manually](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow) if it's not triggered automatically.
-
-### Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/imfing/hextra-starter-template)
-
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fimfing%2Fhextra-starter-template&env=HUGO_VERSION)
-
-Override the configuration:
-
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/e2e3cecd-c884-47ec-b064-14f896fee08d" width=600 />
+The documentation is available at: [https://dainty-chimera-67d839.netlify.app/](https://dainty-chimera-67d839.netlify.app/)
 
 ## Local Development
 
-Pre-requisites: [Hugo](https://gohugo.io/getting-started/installing/), [Go](https://golang.org/doc/install) and [Git](https://git-scm.com)
+### Prerequisites
 
-```shell
-# Clone the repo
-git clone https://github.com/imfing/hextra-starter-template.git
+- [Go](https://golang.org/dl/)
+- [Hugo](https://gohugo.io/installation/) 
 
-# Change directory
-cd hextra-starter-template
+### Setup
 
-# Start the server
-hugo mod tidy
-hugo server --logLevel debug --disableFastRender -p 1313
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Neche-Stephen/spec-test
+   cd spec-test
+   ```
+
+2. **Start the development server**
+   ```bash
+   hugo server
+   ```
+
+3. **Open your browser**
+   Navigate to `http://localhost:1313` to view the documentation site.
+
+### Project Structure
+
+```
+spectest-docs/
+├── content/                    # Documentation content (Markdown files)
+│   ├── _index.md              # Homepage content
+│   └── docs/                  # Documentation sections
+│       ├── introduction/       # Getting started guides
+│       ├── api-references/     # CLI and API documentation
+│       ├── guides/            # How-to guides
+│       ├── integrations/      # Framework integrations
+│       └── more/              # About, terms, etc.
+├── layouts/                   # shortcodes
+├── static/                    # Static assets (favicons)
+├── assets/                    # Source assets (CSS)
+├── hugo.toml                  # Hugo configuration
+└── go.mod                     # Go module dependencies
 ```
 
-### Update theme
+## Building for Production
 
-```shell
-hugo mod get -u
-hugo mod tidy
+To build the static site for production:
+
+```bash
+hugo --minify
 ```
 
-See [Update modules](https://gohugo.io/hugo-modules/use-modules/#update-modules) for more details.
+The built site will be in the `public/` directory, ready for deployment.
 
+**Note**: This repository contains only the documentation site. For the actual Spectest testing tool, visit [https://github.com/justiceo/spectest](https://github.com/justiceo/spectest). 
