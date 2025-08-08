@@ -1,0 +1,58 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – More</title>
+    <link>//localhost:53945/docs/more/</link>
+    <description>Recent content in More on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="//localhost:53945/docs/more/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>About</title>
+      <link>//localhost:53945/docs/more/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:53945/docs/more/about/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Spectest is an open‑source CLI for declarative HTTP API testing. The
+project aims to keep test suites lightweight while providing fast feedback for
+your development workflow.&lt;/p&gt;
+&lt;p&gt;This documentation covers features for version 1.0.5. Source code and issue
+tracking live on &lt;a href=&#34;https://github.com/justiceo/spectest&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. Spectest is
+released under the &lt;a href=&#34;https://github.com/justiceo/spectest/blob/main/LICENSE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For installation and quick start guides see the &lt;a href=&#34;//localhost:53945/docs/introduction/&#34; &gt;Introduction&lt;/a&gt;
+section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-references/cli/&#34; &gt;CLI reference&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Terms of Service</title>
+      <link>//localhost:53945/docs/more/terms-of-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:53945/docs/more/terms-of-service/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The Spectest documentation and CLI are provided &amp;ldquo;as is&amp;rdquo; without warranty of any
+kind. Use the information and tools at your own risk. By using Spectest you
+agree that the maintainers are not liable for any damages or data loss.&lt;/p&gt;
+&lt;p&gt;Spectest is distributed under the &lt;a href=&#34;https://github.com/justiceo/spectest/blob/main/LICENSE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT License&lt;/a&gt;.
+If you contribute to the project you agree that your contributions will also be
+licensed under MIT.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

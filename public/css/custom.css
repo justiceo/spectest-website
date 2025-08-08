@@ -1,0 +1,78 @@
+/* Target pages that contain the hero shortcode (landing page specific) */
+@media (min-width:1024px){
+  .hx-container:has([class*="hero"]) ~ * .sidebar-container,
+[class*="hero"] ~ * .sidebar-container,
+body:has([class*="hero"]) .sidebar-container {
+  display: none !important;
+}
+
+.hx-container:has([class*="hero"]) ~ * .max-xl\:hx-hidden,
+[class*="hero"] ~ * .max-xl\:hx-hidden,
+body:has([class*="hero"]) .max-xl\:hx-hidden {
+  display: none !important;
+}
+}
+
+@media (min-width: 1024px) {
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > article,
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > main,
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > .hx-w-full,
+  [class*="hero"] ~ * .hx-flex > article,
+  [class*="hero"] ~ * .hx-flex > main,
+  [class*="hero"] ~ * .hx-flex > .hx-w-full,
+  body:has([class*="hero"]) .hx-flex > article,
+  body:has([class*="hero"]) .hx-flex > main,
+  body:has([class*="hero"]) .hx-flex > .hx-w-full {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Add spacing between title and hero section */
+.hero {
+  margin-top: 2rem !important;
+  padding-top: 2rem !important;
+}
+
+/* ========================================= */
+/* NEW CSS FOR TOC REMOVAL & CENTERING  */
+/* ========================================= */
+
+/* Use CSS variables to override theme layout */
+body.home,
+body:has([class*="hero"]),
+.hx-container:has([class*="hero"]) {
+  --hextra-sidebar-width: 0px !important;
+  --hextra-toc-width: 0px !important;
+  --hextra-content-max-width: 1200px !important;
+}
+
+/* Hide all sidebar and TOC elements */
+body.home aside,
+body.home .sidebar-container,
+body.home [class*="toc"],
+body:has([class*="hero"]) aside,
+body:has([class*="hero"]) .sidebar-container,
+body:has([class*="hero"]) [class*="toc"] {
+  display: none !important;
+}
+}
+
+/* Center the main content */
+@media (min-width: 1024px) {
+  body.home main,
+  body.home article,
+  body:has([class*="hero"]) main,
+  body:has([class*="hero"]) article {
+    max-width: var(--hextra-content-max-width, 1200px) !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
+  
+  /* Ensure container takes full width */
+  body.home .hx-container,
+  body:has([class*="hero"]) .hx-container {
+    max-width: 100% !important;
+  }
+}
