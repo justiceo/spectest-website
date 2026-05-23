@@ -7,6 +7,10 @@ languageCode = 'en-us'
 title = 'Spectest Documentation'
 theme = 'github.com/imfing/hextra'
 
+[services]
+  [services.googleAnalytics]
+    ID = 'G-7K0SC8YY0P'
+
 [params]
   description = 'Documentation for Spectest'
   [params.navbar]
