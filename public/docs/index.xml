@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Docs</title>
-    <link>//localhost:53945/docs/</link>
-    <description>Recent content in Docs on </description>
+    <title> – Documentation</title>
+    <link>//localhost:1313/docs/</link>
+    <description>Recent content in Documentation on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:53945/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>About</title>
-      <link>//localhost:53945/docs/more/about/</link>
+      <link>//localhost:1313/docs/more/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/more/about/</guid>
+      <guid>//localhost:1313/docs/more/about/</guid>
       <description>
         
         
@@ -29,18 +29,18 @@ your development workflow.&lt;/p&gt;
 &lt;p&gt;This documentation covers features for version 1.0.5. Source code and issue
 tracking live on &lt;a href=&#34;https://github.com/justiceo/spectest&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. Spectest is
 released under the &lt;a href=&#34;https://github.com/justiceo/spectest/blob/main/LICENSE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For installation and quick start guides see the &lt;a href=&#34;//localhost:53945/docs/introduction/&#34; &gt;Introduction&lt;/a&gt;
-section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-references/cli/&#34; &gt;CLI reference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For installation and quick start guides see the &lt;a href=&#34;//localhost:1313/docs/introduction/&#34; &gt;Introduction&lt;/a&gt;
+section or jump straight to the &lt;a href=&#34;//localhost:1313/docs/api-references/cli/&#34; &gt;CLI reference&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>CLI</title>
-      <link>//localhost:53945/docs/api-references/cli/</link>
+      <link>//localhost:1313/docs/api-references/cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/api-references/cli/</guid>
+      <guid>//localhost:1313/docs/api-references/cli/</guid>
       <description>
         
         
@@ -177,10 +177,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Getting Started</title>
-      <link>//localhost:53945/docs/introduction/getting-started/</link>
+      <link>//localhost:1313/docs/introduction/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/getting-started/</guid>
+      <guid>//localhost:1313/docs/introduction/getting-started/</guid>
       <description>
         
         
@@ -291,10 +291,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Jest</title>
-      <link>//localhost:53945/docs/integrations/jest/</link>
+      <link>//localhost:1313/docs/integrations/jest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/integrations/jest/</guid>
+      <guid>//localhost:1313/docs/integrations/jest/</guid>
       <description>
         
         
@@ -427,10 +427,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Test Filtering</title>
-      <link>//localhost:53945/docs/guides/test-filtering/</link>
+      <link>//localhost:1313/docs/guides/test-filtering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/test-filtering/</guid>
+      <guid>//localhost:1313/docs/guides/test-filtering/</guid>
       <description>
         
         
@@ -508,10 +508,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Core Concepts</title>
-      <link>//localhost:53945/docs/introduction/concepts/</link>
+      <link>//localhost:1313/docs/introduction/concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/concepts/</guid>
+      <guid>//localhost:1313/docs/introduction/concepts/</guid>
       <description>
         
         
@@ -585,10 +585,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Snapshots</title>
-      <link>//localhost:53945/docs/guides/snapshots/</link>
+      <link>//localhost:1313/docs/guides/snapshots/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/snapshots/</guid>
+      <guid>//localhost:1313/docs/guides/snapshots/</guid>
       <description>
         
         
@@ -643,10 +643,10 @@ section or jump straight to the &lt;a href=&#34;//localhost:53945/docs/api-refer
     
     <item>
       <title>Terms of Service</title>
-      <link>//localhost:53945/docs/more/terms-of-service/</link>
+      <link>//localhost:1313/docs/more/terms-of-service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/more/terms-of-service/</guid>
+      <guid>//localhost:1313/docs/more/terms-of-service/</guid>
       <description>
         
         
@@ -662,10 +662,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Test Suite</title>
-      <link>//localhost:53945/docs/api-references/suite/</link>
+      <link>//localhost:1313/docs/api-references/suite/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/api-references/suite/</guid>
+      <guid>//localhost:1313/docs/api-references/suite/</guid>
       <description>
         
         
@@ -706,17 +706,17 @@ licensed under MIT.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.&lt;/p&gt;
-&lt;p&gt;Related: &lt;a href=&#34;//localhost:53945/docs/api-references/test-case/&#34; &gt;Test Case&lt;/a&gt; for the available case options.&lt;/p&gt;
+&lt;p&gt;Related: &lt;a href=&#34;//localhost:1313/docs/api-references/test-case/&#34; &gt;Test Case&lt;/a&gt; for the available case options.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Vitest</title>
-      <link>//localhost:53945/docs/integrations/vitest/</link>
+      <link>//localhost:1313/docs/integrations/vitest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/integrations/vitest/</guid>
+      <guid>//localhost:1313/docs/integrations/vitest/</guid>
       <description>
         
         
@@ -847,10 +847,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Environment Variables</title>
-      <link>//localhost:53945/docs/guides/environment-variables/</link>
+      <link>//localhost:1313/docs/guides/environment-variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/environment-variables/</guid>
+      <guid>//localhost:1313/docs/guides/environment-variables/</guid>
       <description>
         
         
@@ -917,10 +917,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Test Case</title>
-      <link>//localhost:53945/docs/api-references/test-case/</link>
+      <link>//localhost:1313/docs/api-references/test-case/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/api-references/test-case/</guid>
+      <guid>//localhost:1313/docs/api-references/test-case/</guid>
       <description>
         
         
@@ -1073,17 +1073,17 @@ licensed under MIT.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;If the server returns &lt;code&gt;201&lt;/code&gt; with a matching body the case passes. Any mismatched status or body value results in a failure.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;//localhost:53945/docs/introduction/helpers/&#34; &gt;Helpers&lt;/a&gt; for utilities that modify multiple cases at once.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;//localhost:1313/docs/introduction/helpers/&#34; &gt;Helpers&lt;/a&gt; for utilities that modify multiple cases at once.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Testing HTTP APIs</title>
-      <link>//localhost:53945/docs/introduction/testing-http-apis/</link>
+      <link>//localhost:1313/docs/introduction/testing-http-apis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/testing-http-apis/</guid>
+      <guid>//localhost:1313/docs/introduction/testing-http-apis/</guid>
       <description>
         
         
@@ -1150,10 +1150,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Organizing Test Suites</title>
-      <link>//localhost:53945/docs/introduction/organizing-test-suites/</link>
+      <link>//localhost:1313/docs/introduction/organizing-test-suites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/organizing-test-suites/</guid>
+      <guid>//localhost:1313/docs/introduction/organizing-test-suites/</guid>
       <description>
         
         
@@ -1202,10 +1202,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Reporting</title>
-      <link>//localhost:53945/docs/guides/reporting/</link>
+      <link>//localhost:1313/docs/guides/reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/reporting/</guid>
+      <guid>//localhost:1313/docs/guides/reporting/</guid>
       <description>
         
         
@@ -1266,10 +1266,10 @@ licensed under MIT.&lt;/p&gt;
     
     <item>
       <title>Helpers</title>
-      <link>//localhost:53945/docs/introduction/helpers/</link>
+      <link>//localhost:1313/docs/introduction/helpers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/helpers/</guid>
+      <guid>//localhost:1313/docs/introduction/helpers/</guid>
       <description>
         
         
@@ -1306,6 +1306,34 @@ licensed under MIT.&lt;/p&gt;
 &lt;blockquote class=&#34;hint info&#34;&gt;
   Helpers are optional but help reduce repetition in large suites.
 &lt;/blockquote&gt; 
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Demo Page</title>
+      <link>//localhost:1313/docs/first-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/first-page/</guid>
+      <description>
+        
+        
+        &lt;p&gt;A simple demo page.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Leaf Page</title>
+      <link>//localhost:1313/docs/folder/leaf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/docs/folder/leaf/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This page is under a folder.&lt;/p&gt;
 
       </description>
     </item>

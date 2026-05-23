@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Guides</title>
-    <link>//localhost:53945/docs/guides/</link>
+    <link>//localhost:1313/docs/guides/</link>
     <description>Recent content in Guides on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:53945/docs/guides/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/guides/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Test Filtering</title>
-      <link>//localhost:53945/docs/guides/test-filtering/</link>
+      <link>//localhost:1313/docs/guides/test-filtering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/test-filtering/</guid>
+      <guid>//localhost:1313/docs/guides/test-filtering/</guid>
       <description>
         
         
@@ -97,10 +97,10 @@
     
     <item>
       <title>Snapshots</title>
-      <link>//localhost:53945/docs/guides/snapshots/</link>
+      <link>//localhost:1313/docs/guides/snapshots/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/snapshots/</guid>
+      <guid>//localhost:1313/docs/guides/snapshots/</guid>
       <description>
         
         
@@ -155,10 +155,10 @@
     
     <item>
       <title>Environment Variables</title>
-      <link>//localhost:53945/docs/guides/environment-variables/</link>
+      <link>//localhost:1313/docs/guides/environment-variables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/environment-variables/</guid>
+      <guid>//localhost:1313/docs/guides/environment-variables/</guid>
       <description>
         
         
@@ -225,10 +225,10 @@
     
     <item>
       <title>Reporting</title>
-      <link>//localhost:53945/docs/guides/reporting/</link>
+      <link>//localhost:1313/docs/guides/reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/guides/reporting/</guid>
+      <guid>//localhost:1313/docs/guides/reporting/</guid>
       <description>
         
         

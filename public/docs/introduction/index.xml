@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Introduction</title>
-    <link>//localhost:53945/docs/introduction/</link>
+    <link>//localhost:1313/docs/introduction/</link>
     <description>Recent content in Introduction on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:53945/docs/introduction/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/docs/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Getting Started</title>
-      <link>//localhost:53945/docs/introduction/getting-started/</link>
+      <link>//localhost:1313/docs/introduction/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/getting-started/</guid>
+      <guid>//localhost:1313/docs/introduction/getting-started/</guid>
       <description>
         
         
@@ -130,10 +130,10 @@
     
     <item>
       <title>Core Concepts</title>
-      <link>//localhost:53945/docs/introduction/concepts/</link>
+      <link>//localhost:1313/docs/introduction/concepts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/concepts/</guid>
+      <guid>//localhost:1313/docs/introduction/concepts/</guid>
       <description>
         
         
@@ -207,10 +207,10 @@
     
     <item>
       <title>Testing HTTP APIs</title>
-      <link>//localhost:53945/docs/introduction/testing-http-apis/</link>
+      <link>//localhost:1313/docs/introduction/testing-http-apis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/testing-http-apis/</guid>
+      <guid>//localhost:1313/docs/introduction/testing-http-apis/</guid>
       <description>
         
         
@@ -277,10 +277,10 @@
     
     <item>
       <title>Organizing Test Suites</title>
-      <link>//localhost:53945/docs/introduction/organizing-test-suites/</link>
+      <link>//localhost:1313/docs/introduction/organizing-test-suites/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/organizing-test-suites/</guid>
+      <guid>//localhost:1313/docs/introduction/organizing-test-suites/</guid>
       <description>
         
         
@@ -329,10 +329,10 @@
     
     <item>
       <title>Helpers</title>
-      <link>//localhost:53945/docs/introduction/helpers/</link>
+      <link>//localhost:1313/docs/introduction/helpers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:53945/docs/introduction/helpers/</guid>
+      <guid>//localhost:1313/docs/introduction/helpers/</guid>
       <description>
         
         

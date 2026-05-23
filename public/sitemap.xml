@@ -2,54 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:53945/docs/more/about/</loc>
+    <loc>//localhost:1313/docs/more/about/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/api-references/cli/</loc>
+    <loc>//localhost:1313/docs/api-references/cli/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/getting-started/</loc>
+    <loc>//localhost:1313/docs/introduction/getting-started/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/</loc>
+    <loc>//localhost:1313/docs/introduction/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/integrations/jest/</loc>
+    <loc>//localhost:1313/docs/integrations/jest/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/guides/test-filtering/</loc>
+    <loc>//localhost:1313/docs/guides/test-filtering/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/concepts/</loc>
+    <loc>//localhost:1313/docs/introduction/concepts/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/guides/</loc>
+    <loc>//localhost:1313/docs/guides/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/guides/snapshots/</loc>
+    <loc>//localhost:1313/docs/guides/snapshots/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/more/terms-of-service/</loc>
+    <loc>//localhost:1313/docs/more/terms-of-service/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/api-references/suite/</loc>
+    <loc>//localhost:1313/docs/api-references/suite/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/integrations/vitest/</loc>
+    <loc>//localhost:1313/docs/integrations/vitest/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/api-references/</loc>
+    <loc>//localhost:1313/docs/api-references/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/guides/environment-variables/</loc>
+    <loc>//localhost:1313/docs/guides/environment-variables/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/api-references/test-case/</loc>
+    <loc>//localhost:1313/docs/api-references/test-case/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/testing-http-apis/</loc>
+    <loc>//localhost:1313/docs/introduction/testing-http-apis/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/integrations/</loc>
+    <loc>//localhost:1313/docs/integrations/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/organizing-test-suites/</loc>
+    <loc>//localhost:1313/docs/introduction/organizing-test-suites/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/guides/reporting/</loc>
+    <loc>//localhost:1313/docs/guides/reporting/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/introduction/helpers/</loc>
+    <loc>//localhost:1313/docs/introduction/helpers/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/more/</loc>
+    <loc>//localhost:1313/docs/more/</loc>
   </url><url>
-    <loc>//localhost:53945/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>//localhost:53945/categories/</loc>
+    <loc>//localhost:1313/about/</loc>
   </url><url>
-    <loc>//localhost:53945/docs/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>//localhost:53945/tags/</loc>
+    <loc>//localhost:1313/docs/first-page/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/folder/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/folder/leaf/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
