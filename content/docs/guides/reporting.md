@@ -31,6 +31,14 @@ Any `console` output from your server is collected and printed beneath the relat
 
 When using `--snapshot` the report file contains the same pass/fail status and latency numbers. This makes it possible to compare historical runs or feed the data into external dashboards.
 
+## Failure Detail
+
+Set `--test-output=errors` to include failed-test server logs and failure reasons directly in the console report, instead of just pass/fail. This is independent of `--verbose`, which controls the runner's own logging.
+
+## OpenAPI Coverage Reports
+
+When running against an OpenAPI document with `--openapi`, pass `--coverage-report` to print a per-operation contract coverage summary after the run — which operations were generated and passed, generated and failed, generated and skipped (with a reason), covered only by a hand-written test, or left uncovered entirely. Use `--coverage-report-file=<path>` to write it to a file instead of stdout. See [OpenAPI Testing](/docs/guides/openapi-testing/) for details.
+
 ## Continuous Integration
 
 Add Spectest to your pipeline by executing the CLI as part of your test job. Example using GitHub Actions:

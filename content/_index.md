@@ -10,7 +10,8 @@ toc: false
 {{< cards >}}
 {{< card title="Fast Execution" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution." >}}
 {{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in JavaScript or JSON. No boilerplate, just describe what you expect." >}}
-{{< card title="Focused Workflow" icon="cursor-click" subtitle="Built for API testing. Smart defaults and intuitive syntax keep you focused." >}}
+{{< card title="OpenAPI-Native" icon="code" link="/docs/guides/openapi-testing/" subtitle="Run OpenAPI 3.0/3.1 operations directly, no hand-written suite required." >}}
+{{< card title="Record & Replay" icon="save" link="/docs/guides/http-recording/" subtitle="Capture outbound HTTP calls from your server and replay them deterministically." >}}
 {{< /cards >}}
 
 ## See It In Action
@@ -49,7 +50,6 @@ export default [
     response: {
       status: 201,
       json: {
-        id: "@type:number",
         name: "John",
         email: "john@example.com",
       },

@@ -9,3 +9,5 @@ Practical walk‑throughs for key Spectest features. These pages dive deeper int
 - [Snapshots](./snapshots/)
 - [Environment Variables](./environment-variables/)
 - [Reporting](./reporting/)
+- [OpenAPI Testing](./openapi-testing/)
+- [HTTP Recording](./http-recording/)

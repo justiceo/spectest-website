@@ -11,6 +11,7 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 | --- | ----------- | ------- |
 | `name` | Human readable test name | required |
 | `operationId` | Unique identifier for the operation | `name` |
+| `phase` | Execution phase (`setup`, `main`, or `teardown`) | `main` |
 | `dependsOn` | Array of operationId strings that must pass first | none |
 | `endpoint` | Request path relative to the base URL | required |
 | `request.method` | HTTP method | `GET` |
@@ -30,7 +31,8 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 | `repeat` | Extra sequential runs of the test | `0` |
 | `bombard` | Additional simultaneous runs of the test | `0` |
 | `delay` | Milliseconds to wait before running | none |
-| `timeout` | Per‑test timeout override | runtime `timeout` |
+| `timeout` | Per‑test timeout override | runtime `timeout` (`60000`ms) |
+| `recording` | Per‑test HTTP recording mode override (`off`, `replay`, or `record`) | runtime `recording` |
 
 ### Example
 
@@ -51,5 +53,9 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 ```
 
 If the server returns `201` with a matching body the case passes. Any mismatched status or body value results in a failure.
+
+### Phases
+
+Tests run in three waves: `setup` → `main` → `teardown`. `phase` is syntactic sugar for `dependsOn` — every `setup` test implicitly blocks every `main` test, and every `main` test implicitly blocks every `teardown` test, without listing operationIds by hand. Within a phase, tests still run concurrently as soon as their explicit `dependsOn` prerequisites pass.
 
 See [Helpers](/docs/introduction/helpers/) for utilities that modify multiple cases at once.

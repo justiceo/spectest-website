@@ -42,3 +42,7 @@ export default [
 ## CI/CD Integration
 
 In a pipeline, export the required environment variables as part of the job configuration. Spectest exits with a non-zero status on failures so it fits naturally into `npm test` or dedicated testing steps.
+
+{{< hint info >}}
+Running against an OpenAPI document instead of hand-written suites? `openapiAuth` hooks in `spectest.config.js` are the equivalent place to read credentials from the environment — see [OpenAPI Testing](/docs/guides/openapi-testing/).
+{{< /hint >}}

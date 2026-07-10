@@ -73,3 +73,13 @@ The CLI prints a summary similar to:
 {{< hint info >}}
 You can run a single suite with `npx spectest jsonpayload.spectest.js` or override `baseUrl` on the command line.
 {{< /hint >}}
+
+## Already have an OpenAPI document?
+
+Skip hand-written suites entirely and run your spec directly:
+
+```bash
+npx spectest --openapi ./openapi.yaml --base-url=https://api.example.com
+```
+
+See [OpenAPI Testing](/docs/guides/openapi-testing/) for how Spectest resolves examples, handles auth, and chains operations.

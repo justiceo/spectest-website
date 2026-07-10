@@ -24,6 +24,15 @@ export default focus(delay(suite, 500));
 - `repeat(tests, count)` – run tests sequentially multiple times
 - `bombard(tests, count)` – launch multiple concurrent runs
 - `skip(tests)` – skip the provided cases
+- `setup(tests)` – mark tests with `phase: 'setup'`
+- `teardown(tests)` – mark tests with `phase: 'teardown'`
+- `recording(tests, mode)` – override the HTTP recording mode (`off`, `replay`, or `record`) for the provided cases
+
+```js
+import { recording } from 'spectest/helpers';
+
+export default recording(suite, 'off');
+```
 
 {{< hint info >}}
 Helpers are optional but help reduce repetition in large suites.
