@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Test Suite – </title>
   <meta name="description" content="A suite is a file that exports either an array of test cases or an object with a name and tests array. Spectest loads every file under testDir matching filePattern and runs the contained cases.
-// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided." /><link rel="canonical" href="//localhost:1313/docs/api-references/suite/" itemprop="url" />
+// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; A suite object may also declare setup and teardown arrays, run before and after tests respectively — equivalent to tagging individual cases with phase: &#39;setup&#39; / phase: &#39;teardown&#39;:" /><link rel="canonical" href="//localhost:1313/docs/api-references/suite/" itemprop="url" />
 
 <meta property="og:title" content="Test Suite" />
 <meta property="og:description" content="A suite is a file that exports either an array of test cases or an object with a name and tests array. Spectest loads every file under testDir matching filePattern and runs the contained cases.
@@ -45,7 +45,7 @@ export default {
   
 
 
-Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided." />
+A suite object may also declare setup and teardown arrays, run before and after tests respectively — equivalent to tagging individual cases with phase: &#39;setup&#39; / phase: &#39;teardown&#39;:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="//localhost:1313/docs/api-references/suite/" /><meta property="article:section" content="docs" />
 
@@ -53,12 +53,12 @@ Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and
 
   <meta itemprop="name" content="Test Suite">
   <meta itemprop="description" content="A suite is a file that exports either an array of test cases or an object with a name and tests array. Spectest loads every file under testDir matching filePattern and runs the contained cases.
-// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.">
-  <meta itemprop="wordCount" content="123">
+// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; A suite object may also declare setup and teardown arrays, run before and after tests respectively — equivalent to tagging individual cases with phase: &#39;setup&#39; / phase: &#39;teardown&#39;:">
+  <meta itemprop="wordCount" content="232">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Test Suite">
   <meta name="twitter:description" content="A suite is a file that exports either an array of test cases or an object with a name and tests array. Spectest loads every file under testDir matching filePattern and runs the contained cases.
-// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.">
+// basic array export default [ { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, { name: &#39;Create Post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39; } } ]; // named suite export default { name: &#39;Comments Tests&#39;, tests: [ { name: &#39;List&#39;, endpoint: &#39;/comments/&#39; }, { name: &#39;Get 1&#39;, endpoint: &#39;/comments/1&#39; } ] }; A suite object may also declare setup and teardown arrays, run before and after tests respectively — equivalent to tagging individual cases with phase: &#39;setup&#39; / phase: &#39;teardown&#39;:">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -286,6 +286,22 @@ Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col open"><a
@@ -501,6 +517,22 @@ Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div></li>
           <li class="open"><a
@@ -694,7 +726,26 @@ Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and
   </button>
 </div>
 </div>
-<p>Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.</p>
+<p>A suite object may also declare <code>setup</code> and <code>teardown</code> arrays, run before and after <code>tests</code> respectively — equivalent to tagging individual cases with <code>phase: 'setup'</code> / <code>phase: 'teardown'</code>:</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Auth Tests&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">setup</span><span style="color:#f92672">:</span> [{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Ping Server&#39;</span>, <span style="color:#a6e22e">endpoint</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/ping&#39;</span> }],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tests</span><span style="color:#f92672">:</span> [{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Login&#39;</span>, <span style="color:#a6e22e">endpoint</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/login&#39;</span>, <span style="color:#a6e22e">request</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;POST&#39;</span> } }],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">teardown</span><span style="color:#f92672">:</span> [{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Logout&#39;</span>, <span style="color:#a6e22e">endpoint</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/logout&#39;</span> }],
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>Suites may use CommonJS, ES modules, JSON, or YAML. Each file becomes its own suite and the file name (without extension) is used when no name is provided. Typescript (<code>.ts</code>) suite files aren&rsquo;t supported — transpile them to JavaScript first.</p>
+<p>An OpenAPI document loaded with <code>--openapi</code> is treated as another suite source alongside hand-written files — its generated tests and a hand-written suite share the same <code>operationId</code> namespace and dependency graph. See <a href="/docs/guides/openapi-testing/" >OpenAPI Testing</a>.</p>
 <p>Related: <a href="/docs/api-references/test-case/" >Test Case</a> for the available case options.</p>
 
         </div>

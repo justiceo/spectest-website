@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Test Case – </title>
   <meta name="description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
-Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure." /><link rel="canonical" href="//localhost:1313/docs/api-references/test-case/" itemprop="url" />
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name phase Execution phase (setup, main, or teardown) main dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout (60000ms) recording Per‑test HTTP recording mode override (off, replay, or record) runtime recording Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure." /><link rel="canonical" href="//localhost:1313/docs/api-references/test-case/" itemprop="url" />
 
 <meta property="og:title" content="Test Case" />
 <meta property="og:description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
@@ -35,6 +35,11 @@ Properties
           operationId
           Unique identifier for the operation
           name
+      
+      
+          phase
+          Execution phase (setup, main, or teardown)
+          main
       
       
           dependsOn
@@ -134,7 +139,12 @@ Properties
       
           timeout
           Per‑test timeout override
-          runtime timeout
+          runtime timeout (60000ms)
+      
+      
+          recording
+          Per‑test HTTP recording mode override (off, replay, or record)
+          runtime recording
       
   
 
@@ -168,12 +178,12 @@ If the server returns 201 with a matching body the case passes. Any mismatched s
 
   <meta itemprop="name" content="Test Case">
   <meta itemprop="description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
-Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
-  <meta itemprop="wordCount" content="257">
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name phase Execution phase (setup, main, or teardown) main dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout (60000ms) recording Per‑test HTTP recording mode override (off, replay, or record) runtime recording Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
+  <meta itemprop="wordCount" content="333">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Test Case">
   <meta name="twitter:description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
-Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name phase Execution phase (setup, main, or teardown) main dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout (60000ms) recording Per‑test HTTP recording mode override (off, replay, or record) runtime recording Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -401,6 +411,22 @@ Properties Key Description Default name Human readable test name required operat
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col open"><a
@@ -624,6 +650,22 @@ Properties Key Description Default name Human readable test name required operat
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div></li>
           <li class="open"><a
@@ -762,6 +804,10 @@ Properties Key Description Default name Human readable test name required operat
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#example">Example
         </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#phases">Phases
+        </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
@@ -809,6 +855,11 @@ Properties Key Description Default name Human readable test name required operat
           <td><code>operationId</code></td>
           <td>Unique identifier for the operation</td>
           <td><code>name</code></td>
+      </tr>
+      <tr>
+          <td><code>phase</code></td>
+          <td>Execution phase (<code>setup</code>, <code>main</code>, or <code>teardown</code>)</td>
+          <td><code>main</code></td>
       </tr>
       <tr>
           <td><code>dependsOn</code></td>
@@ -908,7 +959,12 @@ Properties Key Description Default name Human readable test name required operat
       <tr>
           <td><code>timeout</code></td>
           <td>Per‑test timeout override</td>
-          <td>runtime <code>timeout</code></td>
+          <td>runtime <code>timeout</code> (<code>60000</code>ms)</td>
+      </tr>
+      <tr>
+          <td><code>recording</code></td>
+          <td>Per‑test HTTP recording mode override (<code>off</code>, <code>replay</code>, or <code>record</code>)</td>
+          <td>runtime <code>recording</code></td>
       </tr>
   </tbody>
 </table>
@@ -938,6 +994,8 @@ Properties Key Description Default name Human readable test name required operat
 </div>
 </div>
 <p>If the server returns <code>201</code> with a matching body the case passes. Any mismatched status or body value results in a failure.</p>
+<h3>Phases<span class="hx-absolute -hx-mt-20" id="phases"></span>
+    <a href="#phases" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Tests run in three waves: <code>setup</code> → <code>main</code> → <code>teardown</code>. <code>phase</code> is syntactic sugar for <code>dependsOn</code> — every <code>setup</code> test implicitly blocks every <code>main</code> test, and every <code>main</code> test implicitly blocks every <code>teardown</code> test, without listing operationIds by hand. Within a phase, tests still run concurrently as soon as their explicit <code>dependsOn</code> prerequisites pass.</p>
 <p>See <a href="/docs/introduction/helpers/" >Helpers</a> for utilities that modify multiple cases at once.</p>
 
         </div>

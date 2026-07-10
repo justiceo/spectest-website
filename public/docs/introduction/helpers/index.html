@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Helpers – </title>
   <meta name="description" content="The spectest/helpers module contains utilities for modifying entire test suites. These functions mutate the cases you pass in and return the updated array.
-import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases Helpers are optional but help reduce repetition in large suites. " /><link rel="canonical" href="//localhost:1313/docs/introduction/helpers/" itemprop="url" />
+import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases setup(tests) – mark tests with phase: &#39;setup&#39; teardown(tests) – mark tests with phase: &#39;teardown&#39; recording(tests, mode) – override the HTTP recording mode (off, replay, or record) for the provided cases import { recording } from &#39;spectest/helpers&#39;; export default recording(suite, &#39;off&#39;); Helpers are optional but help reduce repetition in large suites. " /><link rel="canonical" href="//localhost:1313/docs/introduction/helpers/" itemprop="url" />
 
 <meta property="og:title" content="Helpers" />
 <meta property="og:description" content="The spectest/helpers module contains utilities for modifying entire test suites. These functions mutate the cases you pass in and return the updated array.
@@ -40,6 +40,20 @@ focus(tests) – mark tests as focused
 repeat(tests, count) – run tests sequentially multiple times
 bombard(tests, count) – launch multiple concurrent runs
 skip(tests) – skip the provided cases
+setup(tests) – mark tests with phase: &#39;setup&#39;
+teardown(tests) – mark tests with phase: &#39;teardown&#39;
+recording(tests, mode) – override the HTTP recording mode (off, replay, or record) for the provided cases
+
+
+
+import { recording } from &#39;spectest/helpers&#39;;
+
+export default recording(suite, &#39;off&#39;);
+  
+    
+    
+  
+
 
 
 
@@ -52,12 +66,12 @@ skip(tests) – skip the provided cases
 
   <meta itemprop="name" content="Helpers">
   <meta itemprop="description" content="The spectest/helpers module contains utilities for modifying entire test suites. These functions mutate the cases you pass in and return the updated array.
-import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases Helpers are optional but help reduce repetition in large suites.">
-  <meta itemprop="wordCount" content="116">
+import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases setup(tests) – mark tests with phase: &#39;setup&#39; teardown(tests) – mark tests with phase: &#39;teardown&#39; recording(tests, mode) – override the HTTP recording mode (off, replay, or record) for the provided cases import { recording } from &#39;spectest/helpers&#39;; export default recording(suite, &#39;off&#39;); Helpers are optional but help reduce repetition in large suites.">
+  <meta itemprop="wordCount" content="156">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Helpers">
   <meta name="twitter:description" content="The spectest/helpers module contains utilities for modifying entire test suites. These functions mutate the cases you pass in and return the updated array.
-import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases Helpers are optional but help reduce repetition in large suites.">
+import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name: &#39;Get todo list&#39;, endpoint: &#39;/todos&#39; }, { name: &#39;Fetch TODO 1&#39;, endpoint: &#39;/todos/1&#39; }, ]; export default focus(delay(suite, 500)); Available helpers composeBeforeSend(...fns) – combine multiple beforeSend functions composePostTest(...fns) – combine multiple postTest functions delay(tests, ms) – add a delay before each case runs focus(tests) – mark tests as focused repeat(tests, count) – run tests sequentially multiple times bombard(tests, count) – launch multiple concurrent runs skip(tests) – skip the provided cases setup(tests) – mark tests with phase: &#39;setup&#39; teardown(tests) – mark tests with phase: &#39;teardown&#39; recording(tests, mode) – override the HTTP recording mode (off, replay, or record) for the provided cases import { recording } from &#39;spectest/helpers&#39;; export default recording(suite, &#39;off&#39;); Helpers are optional but help reduce repetition in large suites.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -294,6 +308,22 @@ import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name:
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col "><a
@@ -508,6 +538,22 @@ import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name:
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div></li>
           <li class=""><a
@@ -697,7 +743,24 @@ import { focus, delay } from &#39;spectest/helpers&#39;; const suite = [ { name:
 <li><code>repeat(tests, count)</code> – run tests sequentially multiple times</li>
 <li><code>bombard(tests, count)</code> – launch multiple concurrent runs</li>
 <li><code>skip(tests)</code> – skip the provided cases</li>
+<li><code>setup(tests)</code> – mark tests with <code>phase: 'setup'</code></li>
+<li><code>teardown(tests)</code> – mark tests with <code>phase: 'teardown'</code></li>
+<li><code>recording(tests, mode)</code> – override the HTTP recording mode (<code>off</code>, <code>replay</code>, or <code>record</code>) for the provided cases</li>
 </ul>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">recording</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;spectest/helpers&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">recording</span>(<span style="color:#a6e22e">suite</span>, <span style="color:#e6db74">&#39;off&#39;</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
 <blockquote class="hint info">
   Helpers are optional but help reduce repetition in large suites.

@@ -13,7 +13,7 @@
 <title>Core Concepts – </title>
   <meta name="description" content="Spectest revolves around a few simple ideas:
 Test Case A test case describes a single HTTP operation. At minimum it needs a name and an endpoint. Options such as request and response mirror the browser [Request] and [Response] objects.
-Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control." /><link rel="canonical" href="//localhost:1313/docs/introduction/concepts/" itemprop="url" />
+Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name phase setup, main (default), or teardown — controls which of the three execution waves the test belongs to dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control." /><link rel="canonical" href="//localhost:1313/docs/introduction/concepts/" itemprop="url" />
 
 <meta property="og:title" content="Core Concepts" />
 <meta property="og:description" content="Spectest revolves around a few simple ideas:
@@ -40,6 +40,10 @@ Test Case
           Unique identifier; defaults to the name
       
       
+          phase
+          setup, main (default), or teardown — controls which of the three execution waves the test belongs to
+      
+      
           dependsOn
           List of operationIds that must pass first
       
@@ -54,13 +58,13 @@ Other fields like beforeSend, postTest, tags, delay and timeout allow advanced c
   <meta itemprop="name" content="Core Concepts">
   <meta itemprop="description" content="Spectest revolves around a few simple ideas:
 Test Case A test case describes a single HTTP operation. At minimum it needs a name and an endpoint. Options such as request and response mirror the browser [Request] and [Response] objects.
-Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control.">
-  <meta itemprop="wordCount" content="186">
+Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name phase setup, main (default), or teardown — controls which of the three execution waves the test belongs to dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control.">
+  <meta itemprop="wordCount" content="323">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Core Concepts">
   <meta name="twitter:description" content="Spectest revolves around a few simple ideas:
 Test Case A test case describes a single HTTP operation. At minimum it needs a name and an endpoint. Options such as request and response mirror the browser [Request] and [Response] objects.
-Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control.">
+Key Purpose name Human readable name endpoint Path relative to baseUrl operationId Unique identifier; defaults to the name phase setup, main (default), or teardown — controls which of the three execution waves the test belongs to dependsOn List of operationIds that must pass first Other fields like beforeSend, postTest, tags, delay and timeout allow advanced control.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -315,6 +319,22 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col "><a
@@ -529,6 +549,22 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
   >Reporting
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/openapi-testing/"
+    
+  >OpenAPI Testing
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/http-recording/"
+    
+  >HTTP Recording
+    </a>
+              
             </li></ul>
       </div></li>
           <li class=""><a
@@ -726,6 +762,10 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
           <td>Unique identifier; defaults to the name</td>
       </tr>
       <tr>
+          <td><code>phase</code></td>
+          <td><code>setup</code>, <code>main</code> (default), or <code>teardown</code> — controls which of the three execution waves the test belongs to</td>
+      </tr>
+      <tr>
           <td><code>dependsOn</code></td>
           <td>List of operationIds that must pass first</td>
       </tr>
@@ -733,9 +773,10 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
 </table>
 <p>Other fields like <code>beforeSend</code>, <code>postTest</code>, <code>tags</code>, <code>delay</code> and <code>timeout</code> allow advanced control.</p>
 <h2>Test Suite<span class="hx-absolute -hx-mt-20" id="test-suite"></span>
-    <a href="#test-suite" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Suites are files exporting an array of test cases or an object <code>{ name, tests }</code>. The CLI loads every file matching <code>filePattern</code> inside <code>testDir</code> and runs the cases concurrently.</p>
+    <a href="#test-suite" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Suites are files exporting an array of test cases or an object <code>{ name, tests, setup?, teardown? }</code>. The CLI loads every file matching <code>filePattern</code> inside <code>testDir</code> and runs the cases concurrently, subject to <code>rps</code> and <code>dependsOn</code>.</p>
+<p>An OpenAPI 3.0/3.1 document passed via <code>--openapi</code> is loaded the same way, in memory, alongside any hand-written suites — see <a href="/docs/guides/openapi-testing/" >OpenAPI Testing</a>.</p>
 <h2>Configuration<span class="hx-absolute -hx-mt-20" id="configuration"></span>
-    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Settings can come from <code>spectest.config.js</code>, a custom config file or CLI flags. The defaults are:</p>
+    <a href="#configuration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Settings can come from <code>spectest.config.js</code>, a custom config file (<code>--config</code>) or CLI flags, in that order of precedence — CLI flags win. The built-in defaults are:</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
 <div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
@@ -744,12 +785,19 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">testDir</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./test&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filePattern</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;\\.spectest\\.&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rps</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">Infinity</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">timeout</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30000</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">timeout</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">60000</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">randomize</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">happy</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">testOutput</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;summary&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">runningServer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;reuse&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">userAgent</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;chrome_windows&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">proxy</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">recording</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;off&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">recordingFile</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;.spectest/cassette.json&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">missingRecordingBehavior</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fail&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">recordingExcludeUrls</span><span style="color:#f92672">:</span> [],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">openapiAuth</span><span style="color:#f92672">:</span> {},
 </span></span><span style="display:flex;"><span>};</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -760,12 +808,13 @@ Key Purpose name Human readable name endpoint Path relative to baseUrl operation
   </button>
 </div>
 </div>
+<p>See the <a href="/docs/api-references/cli/" >Config options</a> table for a description of every field, and <a href="/docs/guides/http-recording/" >HTTP Recording</a> for the <code>recording*</code> group.</p>
 
 <blockquote class="hint warning">
-  If multiple suites define the same <code>operationId</code>, Spectest will exit with an error.
+  If multiple suites define the same <code>operationId</code> — including a hand-written suite and an OpenAPI-generated one — Spectest will exit with an error.
 </blockquote> 
 <h2>Running Tests<span class="hx-absolute -hx-mt-20" id="running-tests"></span>
-    <a href="#running-tests" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The CLI takes care of starting your server (via <code>startCmd</code>), limiting the request rate and printing detailed results.</p>
+    <a href="#running-tests" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The CLI takes care of starting your server (via <code>startCmd</code>, built first with <code>buildCmd</code> if set), limiting the request rate, and printing detailed results. Internally it runs a small plugin pipeline — loaders, a filter/prepare stage, and a console reporter — but you don&rsquo;t need to know that to use the CLI day to day.</p>
 
         </div>
         <div class="hx-mt-16"></div>

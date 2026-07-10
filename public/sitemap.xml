@@ -44,6 +44,10 @@
   </url><url>
     <loc>//localhost:1313/docs/more/</loc>
   </url><url>
+    <loc>//localhost:1313/docs/guides/openapi-testing/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/guides/http-recording/</loc>
+  </url><url>
     <loc>//localhost:1313/</loc>
   </url><url>
     <loc>//localhost:1313/about/</loc>
