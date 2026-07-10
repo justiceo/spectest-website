@@ -17,6 +17,8 @@ When both `--openapi` and `testDir` are configured, Spectest loads OpenAPI-gener
 
 If a request body, parameter, or response defines an `examples` map (rather than a single `example`), Spectest generates one test per entry. Each generated test's `operationId` becomes `${operationId}+${exampleKey}` and its name gets a ` — ${exampleKey}` suffix.
 
+An operation with only a single legacy `example` (no `examples` map) has it promoted into `examples` under a default key before generation, so it goes through the same per-example path as multi-example operations — including feeding [negative testing](#negative-and-fuzz-testing) below, which needs a seed example to mutate.
+
 The expected response for a given request example is resolved in order:
 
 1. `x-spectest.status` declared on that example.
@@ -82,6 +84,40 @@ export default {
 ```
 
 Set `x-spectest.security: none` to bypass security application entirely for an example, or `x-spectest.security: expired` (etc.) to pick a variant. With no override, a variant map defaults to its `valid` entry.
+
+An `openapiAuth` hook can return `{ credentials: 'include' }` instead of (or alongside) headers/cookies to reuse the ambient session cookie captured from an earlier response in the same run — the same mechanism as setting `credentials: 'include'` on a hand-written test case — rather than baking in a static cookie value at load time.
+
+## Negative and fuzz testing
+
+```bash
+npx spectest --openapi ./openapi.yaml --negative-tests
+```
+
+With `--negative-tests` (or `openapiNegativeTests.enabled: true` in `spectest.config.js`), Spectest mutates each operation's seed example to generate additional invalid-input cases per constraint in its schema — missing required fields, out-of-range numbers, bad enums, wrong types, malformed `email`/`date`/`uri`/`uuid`/`ipv4`/`ipv6` formats, pattern violations, and disallowed extra properties — and asserts the API rejects them. Generated cases are tagged `negative` and their `operationId` is suffixed (e.g. `createOrder+__negative-email-required`).
+
+```js
+// spectest.config.js
+export default {
+  openapiNegativeTests: {
+    enabled: true,
+    maxCasesPerOperation: 20,   // cap mutations generated per operation
+    excludeTags: ['real-backend'], // operations with these x-spectest.tags are skipped
+  },
+};
+```
+
+Override behavior per operation with `x-spectest.negative`:
+
+```yaml
+x-spectest:
+  negative:
+    enabled: false        # opt this operation out entirely
+    fields: [email, age]  # only mutate these request-body fields
+    status: 422            # expected rejection status, if not the default 4xx assumption
+    seedExample: valid     # which examples-map entry to mutate, if there's more than one
+```
+
+Operations with `dependsOn`, or that participate in a `links` chain as a source or target, are skipped for negative-case generation. `--coverage-report` includes a `(+N negative)` count alongside each operation's row once negative cases have run.
 
 ## Native `links` for chaining
 

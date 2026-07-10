@@ -38,12 +38,17 @@ npx spectest [suiteFile] [options]
 | `--openapi-server=<url\|index>` | Server URL or index to select from an OpenAPI document with multiple `servers` entries | none |
 | `--coverage-report` | Print a per-operation OpenAPI contract coverage report after the run | `false` |
 | `--coverage-report-file=<path>` | Write the coverage report to a file instead of stdout | none |
+| `--negative-tests` | Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation | `false` |
+| `--server-startup-timeout=<ms>` | Max time to wait for the SUT server to become ready before failing | `30000` |
+| `--server-health-check-interval=<ms>` | Polling interval while waiting for the SUT server to become ready | `250` |
 | `--dir=<path>` | Root directory of the project; anchors relative paths like `testDir`, `openapi`, `recordingFile` | current working directory |
 | `-h`, `--help` | Show the help message and exit | |
 
 Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (`recording`, `runningServer`, `testOutput`, `missingRecordingBehavior`) are validated whether they come from the CLI or from `spectest.config.js`.
 
-See [Test Suite](../suite/) and [Test Case](../test-case/) for details on the file format, and [OpenAPI Testing](../../guides/openapi-testing/) and [HTTP Recording](../../guides/http-recording/) for the larger features above.
+See [Test Suite](../suite/) and [Test Case](../test-case/) for details on the file format, and [OpenAPI Testing](../../guides/openapi-testing/), [HTTP Recording](../../guides/http-recording/), and [Outbound Throttling](../../guides/outbound-throttling/) for the larger features above.
+
+`outboundThrottle` (rate-limiting the SUT server's *outbound* calls) is config-file only — see [Outbound Throttling](../../guides/outbound-throttling/).
 
 ### Examples
 
@@ -62,6 +67,9 @@ npx spectest --openapi ./openapi.yaml --base-url=https://api.example.com
 
 # Print contract coverage after running an OpenAPI-backed suite
 npx spectest --openapi ./openapi.yaml --coverage-report
+
+# Generate negative/fuzz cases from the spec and report their coverage too
+npx spectest --openapi ./openapi.yaml --negative-tests --coverage-report
 ```
 
 ### `generate openapi-tests`

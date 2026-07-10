@@ -92,4 +92,4 @@ afterAll(async () => {
 });
 ```
 
-Related: [Jest](/docs/integrations/jest/) and [Vitest](/docs/integrations/vitest/) for running Spectest alongside those frameworks.
+Related: [Jest](/docs/integrations/jest/) and [Vitest](/docs/integrations/vitest/) for running Spectest alongside those frameworks, and [Outbound Throttling](/docs/guides/outbound-throttling/) for rate-limiting the same outbound calls instead of recording them.

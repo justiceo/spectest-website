@@ -11,3 +11,4 @@ Practical walk‑throughs for key Spectest features. These pages dive deeper int
 - [Reporting](./reporting/)
 - [OpenAPI Testing](./openapi-testing/)
 - [HTTP Recording](./http-recording/)
+- [Outbound Throttling](./outbound-throttling/)

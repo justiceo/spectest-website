@@ -17,6 +17,7 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 | `request.method` | HTTP method | `GET` |
 | `request.headers` | Additional request headers | none |
 | `request.body` | Request payload | none |
+| `request.credentials` | Fetch `credentials` mode; `'include'` reuses the session cookie captured from an earlier response in the run | none |
 | `request.*` | Any other valid fetch Request option | none |
 | `response.status` | Expected HTTP status | `200` |
 | `response.json` | Expected partial JSON body | none |
@@ -53,6 +54,44 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 ```
 
 If the server returns `201` with a matching body the case passes. Any mismatched status or body value results in a failure.
+
+### Validating with `response.schema`
+
+`response.schema` accepts either a Zod schema (detected via `.safeParse`) or a raw JSON Schema / OpenAPI 3.0/3.1 Schema Object, validated directly — no `__spectestJsonSchema` wrapper needed. OpenAPI-only keywords (`nullable`, `example`, `examples`, `discriminator`, etc.) and 3.0-style boolean `exclusiveMinimum`/`exclusiveMaximum` are normalized before validation against a shared Ajv2020 instance, so schemas copied straight out of an OpenAPI document work unmodified.
+
+```js
+// JSON Schema / OpenAPI Schema Object
+{
+  name: 'Get user',
+  endpoint: '/users/1',
+  response: {
+    status: 200,
+    schema: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', format: 'uuid' },
+        email: { type: 'string', format: 'email' },
+      },
+      required: ['id', 'email'],
+      additionalProperties: false,
+    },
+  },
+}
+```
+
+```js
+// Zod
+import { z } from 'zod';
+
+{
+  name: 'Get user',
+  endpoint: '/users/1',
+  response: {
+    status: 200,
+    schema: z.object({ id: z.string().uuid(), email: z.string().email() }),
+  },
+}
+```
 
 ### Phases
 
