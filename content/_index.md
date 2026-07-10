@@ -3,7 +3,32 @@ description: "Lightning fast and declarative API testing"
 toc: false
 ---
 
-{{< hero title="API testing without the pain" tagline="Run declarative HTTP tests quickly from the CLI." image="https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png" cta_text="Get Started" cta_url="/docs/introduction/getting-started/" />}}
+{{< hero
+  badge="Open Source · MIT Licensed"
+  title="API testing without the pain"
+  tagline="Run declarative HTTP tests quickly from the CLI. No boilerplate, no ceremony — just describe what you expect."
+  cta_text="Get Started"
+  cta_url="/docs/introduction/getting-started/"
+  cta_secondary_text="View on GitHub"
+  cta_secondary_url="https://github.com/justiceo/spectest"
+>}}
+```js
+export default [
+  {
+    name: "Create User",
+    endpoint: "/api/users",
+    request: {
+      method: "POST",
+      body: { name: "John", email: "john@example.com" },
+    },
+    response: {
+      status: 201,
+      json: { name: "John", email: "john@example.com" },
+    },
+  },
+];
+```
+{{< /hero >}}
 
 ## Why Developers Choose Spectest
 
@@ -18,7 +43,9 @@ toc: false
 
 Here's how simple API testing becomes with Spectest:
 
-### Before: Traditional API Testing
+{{< tabs items="Traditional Testing,Spectest" >}}
+
+{{< tab >}}
 ```javascript
 describe('User API', () => {
   it('should create user and return 201', async () => {
@@ -27,7 +54,7 @@ describe('User API', () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: 'John', email: 'john@example.com' })
     });
-    
+
     expect(response.status).toBe(201);
     const user = await response.json();
     expect(user).toHaveProperty('id');
@@ -36,8 +63,9 @@ describe('User API', () => {
   });
 });
 ```
+{{< /tab >}}
 
-### After: Spectest Declarative Testing
+{{< tab >}}
 ```js
 export default [
   {
@@ -57,6 +85,9 @@ export default [
   },
 ];
 ```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 {{< hint type="tip" >}}
 **That's it!** No setup, no boilerplate, no ceremony. Just describe what you want to test and Spectest handles the execution, validation, and reporting.
@@ -64,18 +95,16 @@ export default [
 
 ## Quick Start Guide
 
-{{< cards >}}
-{{< card title="1. Install" icon="download" subtitle="Get up and running with the CLI" >}}
-{{< card title="2. Create Config" icon="cog" subtitle="Define baseUrl in spectest.config.js" >}}
-{{< card title="3. Write Tests" icon="document-add" subtitle="Author cases in JavaScript or JSON" >}}
-{{< card title="4. Run Tests" icon="play" subtitle="Execute suites with clear results" >}}
-{{< /cards >}}
+{{% steps %}}
 
 ### Install Spectest
+
 ```bash
 npm install -g spectest
 ```
+
 ### Create a Config File
+
 ```js
 // spectest.config.js
 export default {
@@ -85,8 +114,8 @@ export default {
 };
 ```
 
-
 ### Create Your First Test
+
 ```js
 // health.spectest.js
 export default [
@@ -95,9 +124,12 @@ export default [
 ```
 
 ### Run Your Tests
+
 ```bash
 npx spectest
 ```
+
+{{% /steps %}}
 
 ## Ready to Transform Your API Testing?
 
@@ -107,8 +139,10 @@ npx spectest
 {{< card title="Get Support" icon="chat" link="/docs/more/about/" subtitle="Join our community or reach out for help" >}}
 {{< /cards >}}
 
----
-
-{{< hint type="info" >}}
-**Open Source & MIT Licensed** • Spectest is free, open-source software released under the MIT license. Use it anywhere, modify it as needed, and contribute back to help make API testing better for everyone.
-{{< /hint >}}
+<div class="st-license">
+  <span class="st-license-icon">{{< icon name="badge-check" attributes="width=20 height=20" >}}</span>
+  <div>
+    <p class="st-license-title">Open Source &amp; MIT Licensed</p>
+    <p class="st-license-text">Spectest is free, open-source software released under the MIT license. Use it anywhere, modify it as needed, and contribute back to help make API testing better for everyone.</p>
+  </div>
+</div>

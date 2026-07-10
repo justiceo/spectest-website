@@ -1,6 +1,10 @@
 # Hugo configuration file
 title: Spectest
 
+build:
+  buildStats:
+    enable: true
+
 # import hextra as module
 module:
   imports:

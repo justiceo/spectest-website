@@ -1,19 +1,66 @@
 {{/*
   Hero shortcode for documentation landing pages
-  Usage: {{< hero title="..." tagline="..." image="..." >}}
+  Usage:
+    {{< hero badge="..." title="..." tagline="..." cta_text="..." cta_url="..."
+             cta_secondary_text="..." cta_secondary_url="..." >}}
+    ```js
+    // optional code sample rendered in the panel on the right
+    ```
+    {{< /hero >}}
 */}}
 
-<section class="hero" style="display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; gap: 2rem; flex-wrap: wrap; background: var(--hero-bg, #f8fafc); border-radius: 1rem; margin-bottom: 2rem;">
-  {{ if .Get "image" }}
-    <img src="{{ .Get "image" }}" alt="Hero image" style="max-width: 320px; width: 100%; height: auto; border-radius: 0.75rem; box-shadow: 0 2px 16px rgba(0,0,0,0.07);" />
-  {{ end }}
-  <div style="max-width: 600px;">
-    {{ if .Get "title" }}
-      <h1 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700;">{{ .Get "title" }}</h1>
-    {{ end }}
-    {{ if .Get "tagline" }}
-      <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 0;">{{ .Get "tagline" }}</p>
-    {{ end }}
-    {{ .Inner }}
+{{- $badge := .Get "badge" -}}
+{{- $title := .Get "title" -}}
+{{- $tagline := .Get "tagline" -}}
+{{- $ctaText := .Get "cta_text" -}}
+{{- $ctaURL := .Get "cta_url" -}}
+{{- $ctaSecondaryText := .Get "cta_secondary_text" -}}
+{{- $ctaSecondaryURL := .Get "cta_secondary_url" -}}
+{{- $image := .Get "image" -}}
+
+<section class="hero st-hero">
+  <div class="st-hero-grid">
+    <div class="st-hero-copy">
+      {{- with $badge }}
+        <span class="st-badge">{{ . }}</span>
+      {{- end }}
+
+      {{- with $title }}
+        <h1 class="st-hero-title">{{ . }}</h1>
+      {{- end }}
+
+      {{- with $tagline }}
+        <p class="st-hero-tagline">{{ . }}</p>
+      {{- end }}
+
+      <div class="st-hero-cta">
+        {{- with $ctaURL }}
+          <a href="{{ . }}" class="st-btn st-btn-primary">
+            {{ $ctaText | default "Get Started" }}
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        {{- end }}
+        {{- with $ctaSecondaryURL }}
+          <a href="{{ . }}" class="st-btn st-btn-secondary">{{ $ctaSecondaryText | default "Learn More" }}</a>
+        {{- end }}
+      </div>
+    </div>
+
+    <div class="st-hero-panel-wrap">
+      {{- if .Inner }}
+        <div class="st-hero-panel">
+          <div class="st-hero-panel-bar">
+            <span class="st-dot st-dot-red"></span>
+            <span class="st-dot st-dot-yellow"></span>
+            <span class="st-dot st-dot-green"></span>
+          </div>
+          <div class="st-hero-panel-code">
+            {{ .Inner | markdownify }}
+          </div>
+        </div>
+      {{- else if $image }}
+        <img src="{{ $image }}" alt="{{ $title }}" class="st-hero-image" />
+      {{- end }}
+    </div>
   </div>
-</section> 
+</section>

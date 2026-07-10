@@ -1,0 +1,39 @@
+{{- $year := now.Format "2006" -}}
+<div class="st-footer">
+  <div class="st-footer-grid">
+    <div class="st-footer-brand">
+      <a href="/" class="st-footer-logo">Spectest</a>
+      <p class="st-footer-tagline">Lightning fast, declarative API testing for the CLI. No boilerplate, no ceremony.</p>
+      <a href="https://github.com/justiceo/spectest" class="st-footer-github" target="_blank" rel="noreferrer" aria-label="Spectest on GitHub">
+        {{ partial "utils/icon.html" (dict "name" "github" "attributes" `width=20 height=20`) }}
+      </a>
+    </div>
+
+    <div class="st-footer-col">
+      <div class="st-footer-heading">Documentation</div>
+      <a href="/docs/introduction/getting-started/">Getting Started</a>
+      <a href="/docs/introduction/concepts/">Concepts</a>
+      <a href="/docs/guides/">Guides</a>
+      <a href="/docs/api-references/">API Reference</a>
+    </div>
+
+    <div class="st-footer-col">
+      <div class="st-footer-heading">Community</div>
+      <a href="https://github.com/justiceo/spectest" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/justiceo/spectest/issues" target="_blank" rel="noreferrer">Report an Issue</a>
+      <a href="/docs/more/about/">Support</a>
+    </div>
+
+    <div class="st-footer-col">
+      <div class="st-footer-heading">Legal</div>
+      <a href="https://github.com/justiceo/spectest/blob/main/LICENSE" target="_blank" rel="noreferrer">MIT License</a>
+      <a href="/docs/more/terms-of-service/">Terms of Service</a>
+    </div>
+  </div>
+
+  <div class="st-footer-bottom">
+    <span>&copy; {{ $year }} Spectest. All rights reserved.</span>
+    <span class="st-footer-dot">&middot;</span>
+    <span>Open source under the MIT License</span>
+  </div>
+</div>
