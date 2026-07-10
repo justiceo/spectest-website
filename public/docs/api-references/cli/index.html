@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>CLI – </title>
   <meta name="description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over spectest.config.js, which takes precedence over the built-in defaults.
-npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js." /><link rel="canonical" href="//localhost:1313/docs/api-references/cli/" itemprop="url" />
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --negative-tests Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation false --server-startup-timeout=&lt;ms&gt; Max time to wait for the SUT server to become ready before failing 30000 --server-health-check-interval=&lt;ms&gt; Polling interval while waiting for the SUT server to become ready 250 --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js." /><link rel="canonical" href="//localhost:1313/docs/api-references/cli/" itemprop="url" />
 
 <meta property="og:title" content="CLI" />
 <meta property="og:description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over spectest.config.js, which takes precedence over the built-in defaults.
@@ -161,6 +161,21 @@ Options
           none
       
       
+          --negative-tests
+          Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation
+          false
+      
+      
+          --server-startup-timeout=&lt;ms&gt;
+          Max time to wait for the SUT server to become ready before failing
+          30000
+      
+      
+          --server-health-check-interval=&lt;ms&gt;
+          Polling interval while waiting for the SUT server to become ready
+          250
+      
+      
           --dir=&lt;path&gt;
           Root directory of the project; anchors relative paths like testDir, openapi, recordingFile
           current working directory
@@ -180,12 +195,12 @@ Provide a file path without a flag to run just that suite. Options that accept a
 
   <meta itemprop="name" content="CLI">
   <meta itemprop="description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over spectest.config.js, which takes precedence over the built-in defaults.
-npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js.">
-  <meta itemprop="wordCount" content="481">
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --negative-tests Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation false --server-startup-timeout=&lt;ms&gt; Max time to wait for the SUT server to become ready before failing 30000 --server-health-check-interval=&lt;ms&gt; Polling interval while waiting for the SUT server to become ready 250 --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js.">
+  <meta itemprop="wordCount" content="553">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CLI">
   <meta name="twitter:description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over spectest.config.js, which takes precedence over the built-in defaults.
-npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js.">
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Path to an extra config file none --base-url=&lt;url&gt; Base URL of the API https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Regex for suite filenames \.spectest\. --start-cmd=&lt;cmd&gt; Command to start the test server npm run start --build-cmd=&lt;cmd&gt; Command to build the test server none --running-server=&lt;reuse|fail|kill&gt; Handling for an already running server reuse --tags=&lt;tag1,tag2&gt; Comma-separated tags used for filtering tests none --rps=&lt;number&gt; Requests per second rate limit Infinity --timeout=&lt;ms&gt; Default request timeout in milliseconds 60000 --snapshot=&lt;file&gt; Path to write a snapshot file none --randomize Shuffle test ordering before execution false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or smart filter to select tests (happy, failures) none --test-output=&lt;summary|errors&gt; Executed test result detail; errors includes failed-test server logs and failure reasons summary --verbose Verbose spectest runner/program output (separate from --test-output) false --user-agent=&lt;name&gt;, --ua=&lt;name&gt; Browser User-Agent string or one of the predefined user-agents chrome_windows --proxy=&lt;url&gt; Proxy URL to route requests through none --recording=&lt;off|replay|record&gt; HTTP recording mode for outbound Node SUT requests off --recording-file=&lt;path&gt; JSON cassette path for HTTP recordings .spectest/cassette.json --missing-recording-behavior=&lt;fail|record|bypass&gt; Behavior when replay can’t find a cassette entry fail --openapi=&lt;path&gt; Path to an OpenAPI 3.0/3.1 document to load directly none --openapi-server=&lt;url|index&gt; Server URL or index to select from an OpenAPI document with multiple servers entries none --coverage-report Print a per-operation OpenAPI contract coverage report after the run false --coverage-report-file=&lt;path&gt; Write the coverage report to a file instead of stdout none --negative-tests Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation false --server-startup-timeout=&lt;ms&gt; Max time to wait for the SUT server to become ready before failing 30000 --server-health-check-interval=&lt;ms&gt; Polling interval while waiting for the SUT server to become ready 250 --dir=&lt;path&gt; Root directory of the project; anchors relative paths like testDir, openapi, recordingFile current working directory -h, --help Show the help message and exit Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (recording, runningServer, testOutput, missingRecordingBehavior) are validated whether they come from the CLI or from spectest.config.js.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -429,6 +444,14 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
   >HTTP Recording
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/outbound-throttling/"
+    
+  >Outbound Throttling
+    </a>
+              
             </li></ul>
       </div>
             </li><li class="hx-flex hx-flex-col open"><a
@@ -498,6 +521,22 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
     href="/docs/integrations/vitest/"
     
   >Vitest
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/integrations/openapi/"
+    
+  >OpenAPI
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/integrations/zod/"
+    
+  >Zod
     </a>
               
             </li></ul>
@@ -668,6 +707,14 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
   >HTTP Recording
     </a>
               
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/guides/outbound-throttling/"
+    
+  >Outbound Throttling
+    </a>
+              
             </li></ul>
       </div></li>
           <li class="open"><a
@@ -726,6 +773,22 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
     href="/docs/integrations/vitest/"
     
   >Vitest
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/integrations/openapi/"
+    
+  >OpenAPI
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/integrations/zod/"
+    
+  >Zod
     </a>
               
             </li></ul>
@@ -986,6 +1049,21 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
           <td>none</td>
       </tr>
       <tr>
+          <td><code>--negative-tests</code></td>
+          <td>Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>--server-startup-timeout=&lt;ms&gt;</code></td>
+          <td>Max time to wait for the SUT server to become ready before failing</td>
+          <td><code>30000</code></td>
+      </tr>
+      <tr>
+          <td><code>--server-health-check-interval=&lt;ms&gt;</code></td>
+          <td>Polling interval while waiting for the SUT server to become ready</td>
+          <td><code>250</code></td>
+      </tr>
+      <tr>
           <td><code>--dir=&lt;path&gt;</code></td>
           <td>Root directory of the project; anchors relative paths like <code>testDir</code>, <code>openapi</code>, <code>recordingFile</code></td>
           <td>current working directory</td>
@@ -998,7 +1076,8 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
   </tbody>
 </table>
 <p>Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (<code>recording</code>, <code>runningServer</code>, <code>testOutput</code>, <code>missingRecordingBehavior</code>) are validated whether they come from the CLI or from <code>spectest.config.js</code>.</p>
-<p>See <a href="../suite/" >Test Suite</a> and <a href="../test-case/" >Test Case</a> for details on the file format, and <a href="../../guides/openapi-testing/" >OpenAPI Testing</a> and <a href="../../guides/http-recording/" >HTTP Recording</a> for the larger features above.</p>
+<p>See <a href="../suite/" >Test Suite</a> and <a href="../test-case/" >Test Case</a> for details on the file format, and <a href="../../guides/openapi-testing/" >OpenAPI Testing</a>, <a href="../../guides/http-recording/" >HTTP Recording</a>, and <a href="../../guides/outbound-throttling/" >Outbound Throttling</a> for the larger features above.</p>
+<p><code>outboundThrottle</code> (rate-limiting the SUT server&rsquo;s <em>outbound</em> calls) is config-file only — see <a href="../../guides/outbound-throttling/" >Outbound Throttling</a>.</p>
 <h3>Examples<span class="hx-absolute -hx-mt-20" id="examples"></span>
     <a href="#examples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -1015,7 +1094,10 @@ npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt
 </span></span><span style="display:flex;"><span>npx spectest --openapi ./openapi.yaml --base-url<span style="color:#f92672">=</span>https://api.example.com
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Print contract coverage after running an OpenAPI-backed suite</span>
-</span></span><span style="display:flex;"><span>npx spectest --openapi ./openapi.yaml --coverage-report</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+</span></span><span style="display:flex;"><span>npx spectest --openapi ./openapi.yaml --coverage-report
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate negative/fuzz cases from the spec and report their coverage too</span>
+</span></span><span style="display:flex;"><span>npx spectest --openapi ./openapi.yaml --negative-tests --coverage-report</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
