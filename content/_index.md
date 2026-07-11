@@ -43,27 +43,51 @@ export default [
 
 Here's how simple API testing becomes with Spectest:
 
-{{< tabs items="Traditional Testing,Spectest" >}}
+<div class="st-compare-grid">
 
-{{< tab >}}
+<div class="st-compare-col">
+
+<span class="st-compare-label">Traditional Testing</span>
+
 ```javascript
 describe('User API', () => {
-  it('should create user and return 201', async () => {
-    const response = await fetch('/api/users', {
+  it('creates a user', async () => {
+    const res = await fetch('/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: 'John', email: 'john@example.com' })
     });
 
-    expect(response.status).toBe(201);
-    const user = await response.json();
+    expect(res.status).toBe(201);
+    expect(res.headers.get('content-type')).toContain('application/json');
+
+    const user = await res.json();
     expect(user).toHaveProperty('id');
     expect(user.name).toBe('John');
     expect(user.email).toBe('john@example.com');
   });
+
+  it('rejects a duplicate email', async () => {
+    const res = await fetch('/api/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: 'Jane', email: 'john@example.com' })
+    });
+
+    expect(res.status).toBe(409);
+    const body = await res.json();
+    expect(body.error).toBe('email already exists');
+  });
 });
 ```
-{{< /tab >}}
+
+</div>
+
+<div class="st-compare-col">
+
+<span class="st-compare-label st-compare-label--highlight">Spectest</span>
+
+{{< tabs items="JS,JSON,YAML" >}}
 
 {{< tab >}}
 ```js
@@ -77,17 +101,94 @@ export default [
     },
     response: {
       status: 201,
-      json: {
-        name: "John",
-        email: "john@example.com",
-      },
+      headers: { "content-type": /application\/json/ },
+      json: { name: "John", email: "john@example.com" },
+    },
+  },
+  {
+    name: "Reject Duplicate Email",
+    endpoint: "/api/users",
+    request: {
+      method: "POST",
+      body: { name: "Jane", email: "john@example.com" },
+    },
+    response: {
+      status: 409,
+      json: { error: "email already exists" },
     },
   },
 ];
 ```
 {{< /tab >}}
 
+{{< tab >}}
+```json
+[
+  {
+    "name": "Create User",
+    "endpoint": "/api/users",
+    "request": {
+      "method": "POST",
+      "body": { "name": "John", "email": "john@example.com" }
+    },
+    "response": {
+      "status": 201,
+      "headers": { "content-type": "application/json" },
+      "json": { "name": "John", "email": "john@example.com" }
+    }
+  },
+  {
+    "name": "Reject Duplicate Email",
+    "endpoint": "/api/users",
+    "request": {
+      "method": "POST",
+      "body": { "name": "Jane", "email": "john@example.com" }
+    },
+    "response": {
+      "status": 409,
+      "json": { "error": "email already exists" }
+    }
+  }
+]
+```
+{{< /tab >}}
+
+{{< tab >}}
+```yaml
+- name: Create User
+  endpoint: /api/users
+  request:
+    method: POST
+    body:
+      name: John
+      email: john@example.com
+  response:
+    status: 201
+    headers:
+      content-type: application/json
+    json:
+      name: John
+      email: john@example.com
+
+- name: Reject Duplicate Email
+  endpoint: /api/users
+  request:
+    method: POST
+    body:
+      name: Jane
+      email: john@example.com
+  response:
+    status: 409
+    json:
+      error: email already exists
+```
+{{< /tab >}}
+
 {{< /tabs >}}
+
+</div>
+
+</div>
 
 {{< hint type="tip" >}}
 **That's it!** No setup, no boilerplate, no ceremony. Just describe what you want to test and Spectest handles the execution, validation, and reporting.

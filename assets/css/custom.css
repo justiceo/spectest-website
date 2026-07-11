@@ -107,6 +107,43 @@ html.dark .st-hero {
   }
 }
 
+.st-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 900px) {
+  .st-compare-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.st-compare-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.st-compare-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #6b7280;
+  padding: 0 0.25rem;
+}
+
+.st-compare-label.st-compare-label--highlight {
+  color: #4f46e5;
+}
+
+html.dark .st-compare-label.st-compare-label--highlight {
+  color: #818cf8;
+}
+
 .st-badge {
   display: inline-flex;
   align-items: center;
