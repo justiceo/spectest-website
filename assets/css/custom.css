@@ -522,3 +522,561 @@ html.dark .st-footer-bottom {
 .st-footer-dot {
   opacity: 0.6;
 }
+
+/* ========================================================================= */
+/* Landing page — shared design tokens                                       */
+/* ========================================================================= */
+
+:root {
+  --st-brand: #4f46e5;
+  --st-brand-strong: #4338ca;
+  --st-ink: #0f172a;
+  --st-muted: #64748b;
+  --st-border: #e5e7eb;
+  --st-surface: #ffffff;
+  --st-surface-2: #f8fafc;
+}
+
+html.dark {
+  --st-brand: #818cf8;
+  --st-brand-strong: #a5b4fc;
+  --st-ink: #f8fafc;
+  --st-muted: #a1a1aa;
+  --st-border: #27272a;
+  --st-surface: #18181b;
+  --st-surface-2: #131316;
+}
+
+/* Centered section heading */
+.st-section-head {
+  max-width: 42rem;
+  margin: 4.5rem auto 2.25rem;
+  text-align: center;
+}
+
+.st-section-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--st-brand);
+}
+
+.st-section-title {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--st-ink);
+}
+
+.st-section-subtitle {
+  margin: 0.85rem auto 0;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--st-muted);
+}
+
+/* ========================================================================= */
+/* Client logo carousel                                                      */
+/* ========================================================================= */
+
+.st-logos {
+  margin: 3rem 0 1rem;
+}
+
+.st-logos-title {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--st-muted);
+}
+
+.st-marquee {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.st-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  padding: 0.25rem 1.5rem;
+  animation: st-marquee 42s linear infinite;
+}
+
+.st-marquee:hover .st-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes st-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
+}
+
+.st-logo-item {
+  flex: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #94a3b8;
+  opacity: 0.8;
+  white-space: nowrap;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.st-logo-item:hover {
+  color: var(--st-ink);
+  opacity: 1;
+}
+
+html.dark .st-logo-item { color: #52525b; }
+
+/* ========================================================================= */
+/* Stats band                                                                */
+/* ========================================================================= */
+
+.st-stats {
+  margin: 3rem 0;
+  padding: 2.25rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--st-border);
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(79, 70, 229, 0.06), transparent 60%),
+    var(--st-surface-2);
+}
+
+html.dark .st-stats {
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(129, 140, 248, 0.1), transparent 60%),
+    var(--st-surface-2);
+}
+
+.st-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .st-stats-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.st-stat { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.st-stat-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--st-brand);
+}
+
+.st-stat-label {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--st-muted);
+}
+
+/* ========================================================================= */
+/* Feature spotlight rows                                                     */
+/* ========================================================================= */
+
+.st-spotlight {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+@media (min-width: 900px) {
+  .st-spotlight { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+  .st-spotlight--flip .st-spotlight-copy { order: 2; }
+}
+
+.st-spotlight-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--st-brand);
+}
+
+.st-spotlight-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--st-ink);
+}
+
+.st-spotlight-body {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--st-muted);
+}
+
+.st-spotlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--st-brand);
+  text-decoration: none;
+}
+
+.st-spotlight-link:hover { color: var(--st-brand-strong); }
+
+.st-spotlight-panel .st-hero-panel-code pre { font-size: 0.82rem; }
+
+/* ========================================================================= */
+/* Comparison table                                                          */
+/* ========================================================================= */
+
+.st-compare-table-wrap { margin: 2rem 0; }
+
+.st-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--st-border);
+  border-radius: 1rem;
+}
+
+.st-table {
+  /* Override Hextra's base `table { display:block; width:auto }`, which would
+     otherwise shrink the table to its content and leave a gap on the right. */
+  display: table !important;
+  width: 100% !important;
+  min-width: 720px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow: visible !important;
+  font-size: 0.9rem;
+}
+
+.st-table th.st-table-feature,
+.st-table td.st-table-feature { width: 32%; }
+
+.st-table th:not(.st-table-feature),
+.st-table td.st-cell-center { width: 17%; }
+
+.st-table thead th {
+  padding: 1rem 1.1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--st-muted);
+  background: var(--st-surface-2);
+  border-bottom: 1px solid var(--st-border);
+  white-space: nowrap;
+}
+
+.st-table th.st-table-feature { text-align: left; }
+
+.st-table th.st-table-primary {
+  color: var(--st-brand);
+  font-weight: 800;
+}
+
+.st-table tbody td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--st-border);
+  color: var(--st-ink);
+}
+
+.st-table tbody tr:last-child td { border-bottom: none; }
+
+.st-table td.st-table-feature { font-weight: 500; }
+.st-table td.st-cell-center { text-align: center; }
+
+/* Highlight the Spectest column (2nd column) */
+.st-table tbody td:nth-child(2),
+.st-table thead th:nth-child(2) {
+  background: rgba(79, 70, 229, 0.05);
+}
+
+html.dark .st-table tbody td:nth-child(2),
+html.dark .st-table thead th:nth-child(2) {
+  background: rgba(129, 140, 248, 0.08);
+}
+
+.st-mark { font-weight: 700; }
+.st-mark-yes { color: #16a34a; }
+.st-mark-partial { color: #d97706; }
+.st-mark-no { color: #cbd5e1; }
+html.dark .st-mark-yes { color: #4ade80; }
+html.dark .st-mark-partial { color: #fbbf24; }
+html.dark .st-mark-no { color: #52525b; }
+
+.st-table-legend {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--st-muted);
+}
+
+/* ========================================================================= */
+/* Testimonials                                                              */
+/* ========================================================================= */
+
+.st-testimonials { margin: 2rem 0; }
+
+.st-testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .st-testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.st-quote-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--st-border);
+  background: var(--st-surface);
+}
+
+html.dark .st-quote-card { background: var(--st-surface); }
+
+.st-quote-stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 0.1em; }
+
+.st-quote-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--st-ink);
+  border: none;
+  padding: 0;
+  font-style: normal;
+}
+
+.st-quote-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  margin-top: auto;
+  text-align: left;
+}
+
+.st-quote-person {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.st-quote-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--st-brand), #a855f7);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.st-quote-name { display: block; font-size: 0.875rem; font-weight: 700; color: var(--st-ink); }
+.st-quote-role { display: block; font-size: 0.8rem; color: var(--st-muted); }
+
+/* ========================================================================= */
+/* Final CTA band                                                            */
+/* ========================================================================= */
+
+.st-final-cta { margin: 4rem 0 2rem; }
+
+.st-final-cta-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(168, 85, 247, 0.55), transparent 55%),
+    linear-gradient(135deg, #4f46e5, #4338ca);
+  box-shadow: 0 30px 60px -30px rgba(79, 70, 229, 0.6);
+}
+
+.st-final-cta-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.st-final-cta-subtitle {
+  margin: 0.85rem auto 0;
+  max-width: 34rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.st-final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.st-final-btn-primary {
+  background: #fff;
+  color: var(--st-brand-strong);
+  border: 1px solid #fff;
+}
+.st-final-btn-primary:hover { background: #f1f5f9; }
+
+.st-final-btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.st-final-btn-secondary:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* ========================================================================= */
+/* Side-by-side comparison — restepp-style folder tabs                       */
+/* ========================================================================= */
+
+/* Equal-width columns regardless of code line length */
+.st-compare-col { min-width: 0; }
+
+/* Left column: static "file" card that mirrors the tabbed card on the right */
+.st-codecard {
+  border: 1px solid var(--st-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--st-surface);
+}
+
+.st-codecard-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.55rem 0.7rem 0;
+  border-bottom: 1px solid var(--st-border);
+}
+
+.st-codecard-tab {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--st-border);
+  border-bottom-color: var(--st-surface-2);
+  border-radius: 0.4rem 0.4rem 0 0;
+  margin-bottom: -1px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--st-ink);
+  background: var(--st-surface-2);
+}
+
+.st-codecard :is(.highlight, pre) {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  overflow-x: auto !important;
+}
+
+/* Tab bar becomes the top of a bordered card */
+.st-compare-col .hextra-scrollbar {
+  overflow: visible;
+  border: 1px solid var(--st-border);
+  border-bottom: none;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background: var(--st-surface);
+}
+
+html.dark .st-compare-col .hextra-scrollbar { background: var(--st-surface); }
+
+.st-compare-col .hextra-scrollbar > div {
+  margin-top: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.55rem 0.7rem 0;
+  border-bottom: 1px solid var(--st-border) !important;
+}
+
+/* Individual tab = folder tab */
+.st-compare-col .hextra-tabs-toggle {
+  margin: 0 !important;
+  padding: 0.4rem 0.8rem !important;
+  border: 1px solid transparent !important;
+  border-radius: 0.4rem 0.4rem 0 0 !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  color: var(--st-muted) !important;
+  background: transparent !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.st-compare-col .hextra-tabs-toggle:hover {
+  color: var(--st-ink) !important;
+  background: var(--st-surface-2) !important;
+}
+
+.st-compare-col .hextra-tabs-toggle[data-state="selected"] {
+  color: var(--st-ink) !important;
+  background: var(--st-surface-2) !important;
+  border-color: var(--st-border) !important;
+  border-bottom-color: var(--st-surface-2) !important;
+  margin-bottom: -1px !important;
+}
+
+/* Panels wrapper = bottom of the same card */
+.st-compare-col .hextra-scrollbar + div {
+  border: 1px solid var(--st-border);
+  border-top: none;
+  border-radius: 0 0 0.75rem 0.75rem;
+  background: var(--st-surface);
+  overflow: hidden;
+}
+
+html.dark .st-compare-col .hextra-scrollbar + div { background: var(--st-surface); }
+
+.st-compare-col .hextra-tabs-panel {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Flatten the code block inside a tab so it sits flush in the card */
+.st-compare-col .hextra-tabs-panel :is(.highlight, pre) {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  overflow-x: auto !important;
+}

@@ -1,0 +1,21 @@
+{{/*
+  Client logo carousel (marquee).
+  Usage: {{< logos title="Trusted by fast-moving teams" >}}
+  NOTE: Replace the names below with real customer logos you have permission to use.
+*/}}
+{{- $title := .Get "title" | default "Trusted by engineering teams shipping fast" -}}
+{{- $names := slice
+  "Northwind" "Ledgerly" "Fathom Labs" "Voltway" "Cascade AI"
+  "Beacon" "Orbital" "Runway Robotics" "Meridian" "Slate"
+  "Harbor" "Pinecrest" "Nimbus Data" "Kestrel" "Lumen"
+-}}
+
+<section class="st-logos">
+  <p class="st-logos-title">{{ $title }}</p>
+  <div class="st-marquee" aria-hidden="false">
+    <div class="st-marquee-track">
+      {{- range $names }}<span class="st-logo-item">{{ . }}</span>{{ end -}}
+      {{- range $names }}<span class="st-logo-item">{{ . }}</span>{{ end -}}
+    </div>
+  </div>
+</section>

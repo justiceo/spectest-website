@@ -1,0 +1,21 @@
+{{/*
+  Full-width gradient call-to-action band.
+  Usage: {{< final-cta title="..." subtitle="..." cta_text="..." cta_url="..."
+          cta_secondary_text="..." cta_secondary_url="..." >}}
+*/}}
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+{{- $ctaText := .Get "cta_text" -}}
+{{- $ctaURL := .Get "cta_url" -}}
+{{- $ctaSecondaryText := .Get "cta_secondary_text" -}}
+{{- $ctaSecondaryURL := .Get "cta_secondary_url" -}}
+<section class="st-final-cta">
+  <div class="st-final-cta-inner">
+    <h2 class="st-final-cta-title">{{ $title }}</h2>
+    {{- with $subtitle }}<p class="st-final-cta-subtitle">{{ . }}</p>{{ end }}
+    <div class="st-final-cta-actions">
+      {{- with $ctaURL }}<a href="{{ . }}" class="st-btn st-final-btn-primary">{{ $ctaText | default "Get Started" }} <span aria-hidden="true">&rarr;</span></a>{{ end }}
+      {{- with $ctaSecondaryURL }}<a href="{{ . }}" class="st-btn st-final-btn-secondary">{{ $ctaSecondaryText | default "Learn more" }}</a>{{ end }}
+    </div>
+  </div>
+</section>

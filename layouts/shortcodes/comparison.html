@@ -1,0 +1,45 @@
+{{/*
+  Competitor comparison table. Usage: {{< comparison >}}
+*/}}
+{{- $rows := slice
+  (dict "label" "Declarative, zero-boilerplate tests" "st" "yes" "postman" "partial" "supertest" "no" "bruno" "partial")
+  (dict "label" "Runs from the CLI &amp; CI natively" "st" "yes" "postman" "partial" "supertest" "yes" "bruno" "yes")
+  (dict "label" "JS · JSON · YAML suites" "st" "yes" "postman" "no" "supertest" "no" "bruno" "partial")
+  (dict "label" "OpenAPI 3.0/3.1 native execution" "st" "yes" "postman" "partial" "supertest" "no" "bruno" "no")
+  (dict "label" "Record &amp; replay outbound HTTP" "st" "yes" "postman" "no" "supertest" "no" "bruno" "no")
+  (dict "label" "Snapshot testing" "st" "yes" "postman" "no" "supertest" "partial" "bruno" "no")
+  (dict "label" "Zod &amp; schema assertions" "st" "yes" "postman" "no" "supertest" "partial" "bruno" "no")
+  (dict "label" "No GUI or account required" "st" "yes" "postman" "no" "supertest" "yes" "bruno" "yes")
+  (dict "label" "Fully open source (MIT)" "st" "yes" "postman" "no" "supertest" "yes" "bruno" "yes")
+-}}
+
+<section class="st-compare-table-wrap">
+  <div class="st-table-scroll">
+    <table class="st-table">
+      <thead>
+        <tr>
+          <th class="st-table-feature">Capability</th>
+          <th class="st-table-primary">Spectest</th>
+          <th>Postman/Newman</th>
+          <th>supertest + Jest</th>
+          <th>Bruno</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $rows }}
+        <tr>
+          <td class="st-table-feature">{{ .label | safeHTML }}</td>
+          {{- range (slice .st .postman .supertest .bruno) }}
+          <td class="st-cell-center">
+            {{- if eq . "yes" -}}<span class="st-mark st-mark-yes" title="Yes">✓</span>
+            {{- else if eq . "partial" -}}<span class="st-mark st-mark-partial" title="Partial">~</span>
+            {{- else -}}<span class="st-mark st-mark-no" title="No">—</span>{{- end -}}
+          </td>
+          {{- end }}
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+  <p class="st-table-legend"><span class="st-mark st-mark-yes">✓</span> Built in &nbsp;·&nbsp; <span class="st-mark st-mark-partial">~</span> Partial / via plugin &nbsp;·&nbsp; <span class="st-mark st-mark-no">—</span> Not supported</p>
+</section>

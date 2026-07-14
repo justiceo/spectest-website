@@ -1,0 +1,40 @@
+{{/*
+  Alternating feature spotlight row.
+  Usage:
+    {{< feature-spotlight
+        eyebrow="Battle tested"
+        title="..."
+        body="..."
+        link="/docs/..."
+        link_text="Learn more"
+        flip="true" >}}
+    ```js
+    // code sample shown beside the copy
+    ```
+    {{< /feature-spotlight >}}
+*/}}
+{{- $eyebrow := .Get "eyebrow" -}}
+{{- $title := .Get "title" -}}
+{{- $body := .Get "body" -}}
+{{- $link := .Get "link" -}}
+{{- $linkText := .Get "link_text" | default "Learn more" -}}
+{{- $flip := eq (.Get "flip") "true" -}}
+
+<section class="st-spotlight {{ if $flip }}st-spotlight--flip{{ end }}">
+  <div class="st-spotlight-copy">
+    {{- with $eyebrow }}<span class="st-spotlight-eyebrow">{{ . }}</span>{{ end }}
+    <h3 class="st-spotlight-title">{{ $title }}</h3>
+    <p class="st-spotlight-body">{{ $body }}</p>
+    {{- with $link }}<a href="{{ . }}" class="st-spotlight-link">{{ $linkText }} <span aria-hidden="true">&rarr;</span></a>{{ end }}
+  </div>
+  <div class="st-spotlight-panel">
+    <div class="st-hero-panel">
+      <div class="st-hero-panel-bar">
+        <span class="st-dot st-dot-red"></span>
+        <span class="st-dot st-dot-yellow"></span>
+        <span class="st-dot st-dot-green"></span>
+      </div>
+      <div class="st-hero-panel-code">{{ .Inner | markdownify }}</div>
+    </div>
+  </div>
+</section>

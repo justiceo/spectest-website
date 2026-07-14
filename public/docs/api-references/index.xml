@@ -1,555 +1,490 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title> – API References</title>
-    <link>//localhost:1313/docs/api-references/</link>
-    <description>Recent content in API References on </description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	  <atom:link href="//localhost:1313/docs/api-references/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-    <item>
-      <title>CLI</title>
-      <link>//localhost:1313/docs/api-references/cli/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/api-references/cli/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The &lt;code&gt;spectest&lt;/code&gt; command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over &lt;code&gt;spectest.config.js&lt;/code&gt;, which takes precedence over the built-in defaults.&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;suiteFile&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Options&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;options&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#options&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Flag&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-          &lt;th&gt;Default&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--config=&amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Path to an extra config file&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--base-url=&amp;lt;url&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Base URL of the API&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;https://localhost:8080&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--test-dir=&amp;lt;dir&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Directory containing test suites&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;./test&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--file-pattern=&amp;lt;regex&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Regex for suite filenames&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;\.spectest\.&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--start-cmd=&amp;lt;cmd&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Command to start the test server&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;npm run start&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--build-cmd=&amp;lt;cmd&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Command to build the test server&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--running-server=&amp;lt;reuse|fail|kill&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Handling for an already running server&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;reuse&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--tags=&amp;lt;tag1,tag2&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Comma-separated tags used for filtering tests&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--rps=&amp;lt;number&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Requests per second rate limit&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;Infinity&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--timeout=&amp;lt;ms&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Default request timeout in milliseconds&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;60000&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--snapshot=&amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Path to write a snapshot file&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--randomize&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Shuffle test ordering before execution&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--happy&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Run only tests expecting a 2xx status&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--filter=&amp;lt;pattern&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Regex or smart filter to select tests (&lt;code&gt;happy&lt;/code&gt;, &lt;code&gt;failures&lt;/code&gt;)&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--test-output=&amp;lt;summary|errors&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Executed test result detail; &lt;code&gt;errors&lt;/code&gt; includes failed-test server logs and failure reasons&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;summary&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--verbose&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Verbose spectest runner/program output (separate from &lt;code&gt;--test-output&lt;/code&gt;)&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--user-agent=&amp;lt;name&amp;gt;&lt;/code&gt;, &lt;code&gt;--ua=&amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Browser User-Agent string or one of the predefined &lt;a href=&#34;https://github.com/justiceo/spectest/blob/main/src/user-agents.ts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;user-agents&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;chrome_windows&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--proxy=&amp;lt;url&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Proxy URL to route requests through&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--recording=&amp;lt;off|replay|record&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;HTTP recording mode for outbound Node SUT requests&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;off&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--recording-file=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;JSON cassette path for HTTP recordings&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;.spectest/cassette.json&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--missing-recording-behavior=&amp;lt;fail|record|bypass&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Behavior when replay can&amp;rsquo;t find a cassette entry&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;fail&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--openapi=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Path to an OpenAPI 3.0/3.1 document to load directly&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--openapi-server=&amp;lt;url|index&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Server URL or index to select from an OpenAPI document with multiple &lt;code&gt;servers&lt;/code&gt; entries&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--coverage-report&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Print a per-operation OpenAPI contract coverage report after the run&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--coverage-report-file=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Write the coverage report to a file instead of stdout&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--negative-tests&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--server-startup-timeout=&amp;lt;ms&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Max time to wait for the SUT server to become ready before failing&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;30000&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--server-health-check-interval=&amp;lt;ms&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Polling interval while waiting for the SUT server to become ready&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;250&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;--dir=&amp;lt;path&amp;gt;&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Root directory of the project; anchors relative paths like &lt;code&gt;testDir&lt;/code&gt;, &lt;code&gt;openapi&lt;/code&gt;, &lt;code&gt;recordingFile&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;current working directory&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;-h&lt;/code&gt;, &lt;code&gt;--help&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Show the help message and exit&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (&lt;code&gt;recording&lt;/code&gt;, &lt;code&gt;runningServer&lt;/code&gt;, &lt;code&gt;testOutput&lt;/code&gt;, &lt;code&gt;missingRecordingBehavior&lt;/code&gt;) are validated whether they come from the CLI or from &lt;code&gt;spectest.config.js&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;../suite/&#34; &gt;Test Suite&lt;/a&gt; and &lt;a href=&#34;../test-case/&#34; &gt;Test Case&lt;/a&gt; for details on the file format, and &lt;a href=&#34;../../guides/openapi-testing/&#34; &gt;OpenAPI Testing&lt;/a&gt;, &lt;a href=&#34;../../guides/http-recording/&#34; &gt;HTTP Recording&lt;/a&gt;, and &lt;a href=&#34;../../guides/outbound-throttling/&#34; &gt;Outbound Throttling&lt;/a&gt; for the larger features above.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;outboundThrottle&lt;/code&gt; (rate-limiting the SUT server&amp;rsquo;s &lt;em&gt;outbound&lt;/em&gt; calls) is config-file only — see &lt;a href=&#34;../../guides/outbound-throttling/&#34; &gt;Outbound Throttling&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Examples&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;examples&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#examples&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run every suite discovered in testDir&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Only run a specific file&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest auth.spectest.js
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Run with mobile user agent and write a snapshot&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest --user-agent&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;chrome_android --snapshot&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;snap.json
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Load and run tests directly from an OpenAPI document&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest --openapi ./openapi.yaml --base-url&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://api.example.com
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Print contract coverage after running an OpenAPI-backed suite&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest --openapi ./openapi.yaml --coverage-report
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Generate negative/fuzz cases from the spec and report their coverage too&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest --openapi ./openapi.yaml --negative-tests --coverage-report&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;&lt;code&gt;generate openapi-tests&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;generate-openapi-tests&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#generate-openapi-tests&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Scaffolds an editable &lt;code&gt;.spectest.js&lt;/code&gt; file containing the same tests Spectest would generate in-memory from an OpenAPI document:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npx spectest generate openapi-tests --openapi &amp;lt;path&amp;gt; --output &amp;lt;dir&amp;gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;--dir &amp;lt;projectRoot&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;--config &amp;lt;file&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This is a convenience for suites that will grow real &lt;code&gt;beforeSend&lt;/code&gt;/&lt;code&gt;postTest&lt;/code&gt; logic by hand — everything it writes is already expressible via direct &lt;code&gt;--openapi&lt;/code&gt; loading.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Test Suite</title>
-      <link>//localhost:1313/docs/api-references/suite/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/api-references/suite/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A &lt;strong&gt;suite&lt;/strong&gt; is a file that exports either an array of test cases or an object with a &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;tests&lt;/code&gt; array. Spectest loads every file under &lt;code&gt;testDir&lt;/code&gt; matching &lt;code&gt;filePattern&lt;/code&gt; and runs the contained cases.&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// basic array
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Fetch TODO 1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/todos/1&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Create Post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/posts&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// named suite
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Comments Tests&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;tests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;List&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/comments/&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Get 1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/comments/1&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;A suite object may also declare &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;teardown&lt;/code&gt; arrays, run before and after &lt;code&gt;tests&lt;/code&gt; respectively — equivalent to tagging individual cases with &lt;code&gt;phase: &#39;setup&#39;&lt;/code&gt; / &lt;code&gt;phase: &#39;teardown&#39;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Auth Tests&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Ping Server&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/ping&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;tests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Login&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/login&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;teardown&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Logout&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/logout&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Suites may use CommonJS, ES modules, JSON, or YAML. Each file becomes its own suite and the file name (without extension) is used when no name is provided. Typescript (&lt;code&gt;.ts&lt;/code&gt;) suite files aren&amp;rsquo;t supported — transpile them to JavaScript first.&lt;/p&gt;
-&lt;p&gt;An OpenAPI document loaded with &lt;code&gt;--openapi&lt;/code&gt; is treated as another suite source alongside hand-written files — its generated tests and a hand-written suite share the same &lt;code&gt;operationId&lt;/code&gt; namespace and dependency graph. See &lt;a href=&#34;//localhost:1313/docs/guides/openapi-testing/&#34; &gt;OpenAPI Testing&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Related: &lt;a href=&#34;//localhost:1313/docs/api-references/test-case/&#34; &gt;Test Case&lt;/a&gt; for the available case options.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Test Case</title>
-      <link>//localhost:1313/docs/api-references/test-case/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/docs/api-references/test-case/</guid>
-      <description>
-        
-        
-        &lt;p&gt;A &lt;strong&gt;test case&lt;/strong&gt; describes a single HTTP operation. Only &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;endpoint&lt;/code&gt; are required. All other fields are optional and mirror the &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Request&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;fetch&lt;/code&gt; Request&lt;/a&gt; and &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Response&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;Response&lt;/code&gt;&lt;/a&gt; objects.&lt;/p&gt;
-&lt;h3&gt;Properties&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;properties&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#properties&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Key&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-          &lt;th&gt;Default&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Human readable test name&lt;/td&gt;
-          &lt;td&gt;required&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;operationId&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Unique identifier for the operation&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;name&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;phase&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Execution phase (&lt;code&gt;setup&lt;/code&gt;, &lt;code&gt;main&lt;/code&gt;, or &lt;code&gt;teardown&lt;/code&gt;)&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;main&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;dependsOn&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Array of operationId strings that must pass first&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;endpoint&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Request path relative to the base URL&lt;/td&gt;
-          &lt;td&gt;required&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;request.method&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;HTTP method&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;request.headers&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Additional request headers&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;request.body&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Request payload&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;request.credentials&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Fetch &lt;code&gt;credentials&lt;/code&gt; mode; &lt;code&gt;&#39;include&#39;&lt;/code&gt; reuses the session cookie captured from an earlier response in the run&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;request.*&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Any other valid fetch Request option&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;response.status&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Expected HTTP status&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;200&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;response.json&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Expected partial JSON body&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;response.schema&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Zod or JSON schema to validate response&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;response.headers&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Expected response headers&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;response.*&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Other fetch Response fields&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;beforeSend(req, state)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Function to finalize the request&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;postTest(res, state, ctx)&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Function called after the response&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;tags&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Tags used with &lt;code&gt;--tags&lt;/code&gt; filtering&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;skip&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Skip this test&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;focus&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Run only focused tests when present&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;repeat&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Extra sequential runs of the test&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;bombard&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Additional simultaneous runs of the test&lt;/td&gt;
-          &lt;td&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;delay&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Milliseconds to wait before running&lt;/td&gt;
-          &lt;td&gt;none&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;timeout&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Per‑test timeout override&lt;/td&gt;
-          &lt;td&gt;runtime &lt;code&gt;timeout&lt;/code&gt; (&lt;code&gt;60000&lt;/code&gt;ms)&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;code&gt;recording&lt;/code&gt;&lt;/td&gt;
-          &lt;td&gt;Per‑test HTTP recording mode override (&lt;code&gt;off&lt;/code&gt;, &lt;code&gt;replay&lt;/code&gt;, or &lt;code&gt;record&lt;/code&gt;)&lt;/td&gt;
-          &lt;td&gt;runtime &lt;code&gt;recording&lt;/code&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;Example&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;example&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Create a post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/posts&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;POST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;application/json&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;userId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;201&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;101&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;userId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;If the server returns &lt;code&gt;201&lt;/code&gt; with a matching body the case passes. Any mismatched status or body value results in a failure.&lt;/p&gt;
-&lt;h3&gt;Validating with &lt;code&gt;response.schema&lt;/code&gt;&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;validating-with-responseschema&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#validating-with-responseschema&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;response.schema&lt;/code&gt; accepts either a Zod schema (detected via &lt;code&gt;.safeParse&lt;/code&gt;) or a raw JSON Schema / OpenAPI 3.0/3.1 Schema Object, validated directly — no &lt;code&gt;__spectestJsonSchema&lt;/code&gt; wrapper needed. OpenAPI-only keywords (&lt;code&gt;nullable&lt;/code&gt;, &lt;code&gt;example&lt;/code&gt;, &lt;code&gt;examples&lt;/code&gt;, &lt;code&gt;discriminator&lt;/code&gt;, etc.) and 3.0-style boolean &lt;code&gt;exclusiveMinimum&lt;/code&gt;/&lt;code&gt;exclusiveMaximum&lt;/code&gt; are normalized before validation against a shared Ajv2020 instance, so schemas copied straight out of an OpenAPI document work unmodified.&lt;/p&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// JSON Schema / OpenAPI Schema Object
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Get user&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/users/1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;schema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;object&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;properties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;string&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;uuid&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;string&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;email&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;required&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nx&#34;&gt;additionalProperties&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code&#34;&gt;
-
-&lt;div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Zod
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;zod&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Get user&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;endpoint&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/users/1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;schema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;uuid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}),&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0&#34;&gt;
-  &lt;button
-    class=&#34;hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50&#34;
-    title=&#34;Copy code&#34;
-  &gt;
-    &lt;div class=&#34;copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-    &lt;div class=&#34;success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4&#34;&gt;&lt;/div&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3&gt;Phases&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;phases&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#phases&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Tests run in three waves: &lt;code&gt;setup&lt;/code&gt; → &lt;code&gt;main&lt;/code&gt; → &lt;code&gt;teardown&lt;/code&gt;. &lt;code&gt;phase&lt;/code&gt; is syntactic sugar for &lt;code&gt;dependsOn&lt;/code&gt; — every &lt;code&gt;setup&lt;/code&gt; test implicitly blocks every &lt;code&gt;main&lt;/code&gt; test, and every &lt;code&gt;main&lt;/code&gt; test implicitly blocks every &lt;code&gt;teardown&lt;/code&gt; test, without listing operationIds by hand. Within a phase, tests still run concurrently as soon as their explicit &lt;code&gt;dependsOn&lt;/code&gt; prerequisites pass.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;//localhost:1313/docs/introduction/helpers/&#34; &gt;Helpers&lt;/a&gt; for utilities that modify multiple cases at once.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– API References</title><link>/docs/api-references/</link><description>Recent content in API References on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/docs/api-references/index.xml" rel="self" type="application/rss+xml"/><item><title>CLI</title><link>/docs/api-references/cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-references/cli/</guid><description>
+&lt;p>The &lt;code>spectest&lt;/code> command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line. CLI flags take precedence over &lt;code>spectest.config.js&lt;/code>, which takes precedence over the built-in defaults.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npx spectest &lt;span class="o">[&lt;/span>suiteFile&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>options&lt;span class="o">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Options&lt;span class="hx-absolute -hx-mt-20" id="options">&lt;/span>
+&lt;a href="#options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Flag&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>--config=&amp;lt;file&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Path to an extra config file&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--base-url=&amp;lt;url&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Base URL of the API&lt;/td>
+&lt;td>&lt;code>https://localhost:8080&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--test-dir=&amp;lt;dir&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Directory containing test suites&lt;/td>
+&lt;td>&lt;code>./test&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--file-pattern=&amp;lt;regex&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Regex for suite filenames&lt;/td>
+&lt;td>&lt;code>\.spectest\.&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--start-cmd=&amp;lt;cmd&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Command to start the test server&lt;/td>
+&lt;td>&lt;code>npm run start&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--build-cmd=&amp;lt;cmd&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Command to build the test server&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--running-server=&amp;lt;reuse|fail|kill&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Handling for an already running server&lt;/td>
+&lt;td>&lt;code>reuse&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--tags=&amp;lt;tag1,tag2&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Comma-separated tags used for filtering tests&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--rps=&amp;lt;number&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Requests per second rate limit&lt;/td>
+&lt;td>&lt;code>Infinity&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--timeout=&amp;lt;ms&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Default request timeout in milliseconds&lt;/td>
+&lt;td>&lt;code>60000&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--snapshot=&amp;lt;file&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Path to write a snapshot file&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--randomize&lt;/code>&lt;/td>
+&lt;td>Shuffle test ordering before execution&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--happy&lt;/code>&lt;/td>
+&lt;td>Run only tests expecting a 2xx status&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--filter=&amp;lt;pattern&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Regex or smart filter to select tests (&lt;code>happy&lt;/code>, &lt;code>failures&lt;/code>)&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--test-output=&amp;lt;summary|errors&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Executed test result detail; &lt;code>errors&lt;/code> includes failed-test server logs and failure reasons&lt;/td>
+&lt;td>&lt;code>summary&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--verbose&lt;/code>&lt;/td>
+&lt;td>Verbose spectest runner/program output (separate from &lt;code>--test-output&lt;/code>)&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--user-agent=&amp;lt;name&amp;gt;&lt;/code>, &lt;code>--ua=&amp;lt;name&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Browser User-Agent string or one of the predefined &lt;a href="https://github.com/justiceo/spectest/blob/main/src/user-agents.ts" target="_blank" rel="noopener">user-agents&lt;/a>&lt;/td>
+&lt;td>&lt;code>chrome_windows&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--proxy=&amp;lt;url&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Proxy URL to route requests through&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--recording=&amp;lt;off|replay|record&amp;gt;&lt;/code>&lt;/td>
+&lt;td>HTTP recording mode for outbound Node SUT requests&lt;/td>
+&lt;td>&lt;code>off&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--recording-file=&amp;lt;path&amp;gt;&lt;/code>&lt;/td>
+&lt;td>JSON cassette path for HTTP recordings&lt;/td>
+&lt;td>&lt;code>.spectest/cassette.json&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--missing-recording-behavior=&amp;lt;fail|record|bypass&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Behavior when replay can&amp;rsquo;t find a cassette entry&lt;/td>
+&lt;td>&lt;code>fail&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--openapi=&amp;lt;path&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Path to an OpenAPI 3.0/3.1 document to load directly&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--openapi-server=&amp;lt;url|index&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Server URL or index to select from an OpenAPI document with multiple &lt;code>servers&lt;/code> entries&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--coverage-report&lt;/code>&lt;/td>
+&lt;td>Print a per-operation OpenAPI contract coverage report after the run&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--coverage-report-file=&amp;lt;path&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Write the coverage report to a file instead of stdout&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--negative-tests&lt;/code>&lt;/td>
+&lt;td>Generate additional invalid-input (negative/fuzz) tests per OpenAPI operation&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--server-startup-timeout=&amp;lt;ms&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Max time to wait for the SUT server to become ready before failing&lt;/td>
+&lt;td>&lt;code>30000&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--server-health-check-interval=&amp;lt;ms&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Polling interval while waiting for the SUT server to become ready&lt;/td>
+&lt;td>&lt;code>250&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>--dir=&amp;lt;path&amp;gt;&lt;/code>&lt;/td>
+&lt;td>Root directory of the project; anchors relative paths like &lt;code>testDir&lt;/code>, &lt;code>openapi&lt;/code>, &lt;code>recordingFile&lt;/code>&lt;/td>
+&lt;td>current working directory&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>-h&lt;/code>, &lt;code>--help&lt;/code>&lt;/td>
+&lt;td>Show the help message and exit&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Provide a file path without a flag to run just that suite. Options that accept a list of enum-like values (&lt;code>recording&lt;/code>, &lt;code>runningServer&lt;/code>, &lt;code>testOutput&lt;/code>, &lt;code>missingRecordingBehavior&lt;/code>) are validated whether they come from the CLI or from &lt;code>spectest.config.js&lt;/code>.&lt;/p>
+&lt;p>See &lt;a href="../suite/" >Test Suite&lt;/a> and &lt;a href="../test-case/" >Test Case&lt;/a> for details on the file format, and &lt;a href="../../guides/openapi-testing/" >OpenAPI Testing&lt;/a>, &lt;a href="../../guides/http-recording/" >HTTP Recording&lt;/a>, and &lt;a href="../../guides/outbound-throttling/" >Outbound Throttling&lt;/a> for the larger features above.&lt;/p>
+&lt;p>&lt;code>outboundThrottle&lt;/code> (rate-limiting the SUT server&amp;rsquo;s &lt;em>outbound&lt;/em> calls) is config-file only — see &lt;a href="../../guides/outbound-throttling/" >Outbound Throttling&lt;/a>.&lt;/p>
+&lt;h3>Examples&lt;span class="hx-absolute -hx-mt-20" id="examples">&lt;/span>
+&lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run every suite discovered in testDir&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Only run a specific file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest auth.spectest.js
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Run with mobile user agent and write a snapshot&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest --user-agent&lt;span class="o">=&lt;/span>chrome_android --snapshot&lt;span class="o">=&lt;/span>snap.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Load and run tests directly from an OpenAPI document&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest --openapi ./openapi.yaml --base-url&lt;span class="o">=&lt;/span>https://api.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Print contract coverage after running an OpenAPI-backed suite&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest --openapi ./openapi.yaml --coverage-report
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Generate negative/fuzz cases from the spec and report their coverage too&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npx spectest --openapi ./openapi.yaml --negative-tests --coverage-report&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>&lt;code>generate openapi-tests&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="generate-openapi-tests">&lt;/span>
+&lt;a href="#generate-openapi-tests" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Scaffolds an editable &lt;code>.spectest.js&lt;/code> file containing the same tests Spectest would generate in-memory from an OpenAPI document:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npx spectest generate openapi-tests --openapi &amp;lt;path&amp;gt; --output &amp;lt;dir&amp;gt; &lt;span class="o">[&lt;/span>--dir &amp;lt;projectRoot&amp;gt;&lt;span class="o">]&lt;/span> &lt;span class="o">[&lt;/span>--config &amp;lt;file&amp;gt;&lt;span class="o">]&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>This is a convenience for suites that will grow real &lt;code>beforeSend&lt;/code>/&lt;code>postTest&lt;/code> logic by hand — everything it writes is already expressible via direct &lt;code>--openapi&lt;/code> loading.&lt;/p></description></item><item><title>Test Suite</title><link>/docs/api-references/suite/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-references/suite/</guid><description>
+&lt;p>A &lt;strong>suite&lt;/strong> is a file that exports either an array of test cases or an object with a &lt;code>name&lt;/code> and &lt;code>tests&lt;/code> array. Spectest loads every file under &lt;code>testDir&lt;/code> matching &lt;code>filePattern&lt;/code> and runs the contained cases.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// basic array
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Fetch TODO 1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/todos/1&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Create Post&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/posts&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">];&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// named suite
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Comments Tests&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tests&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;List&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/comments/&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Get 1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/comments/1&amp;#39;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>A suite object may also declare &lt;code>setup&lt;/code> and &lt;code>teardown&lt;/code> arrays, run before and after &lt;code>tests&lt;/code> respectively — equivalent to tagging individual cases with &lt;code>phase: 'setup'&lt;/code> / &lt;code>phase: 'teardown'&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Auth Tests&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setup&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Ping Server&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/ping&amp;#39;&lt;/span> &lt;span class="p">}],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tests&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Login&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/login&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">}],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">teardown&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Logout&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/logout&amp;#39;&lt;/span> &lt;span class="p">}],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Suites may use CommonJS, ES modules, JSON, or YAML. Each file becomes its own suite and the file name (without extension) is used when no name is provided. Typescript (&lt;code>.ts&lt;/code>) suite files aren&amp;rsquo;t supported — transpile them to JavaScript first.&lt;/p>
+&lt;p>An OpenAPI document loaded with &lt;code>--openapi&lt;/code> is treated as another suite source alongside hand-written files — its generated tests and a hand-written suite share the same &lt;code>operationId&lt;/code> namespace and dependency graph. See &lt;a href="/docs/guides/openapi-testing/" >OpenAPI Testing&lt;/a>.&lt;/p>
+&lt;p>Related: &lt;a href="/docs/api-references/test-case/" >Test Case&lt;/a> for the available case options.&lt;/p></description></item><item><title>Test Case</title><link>/docs/api-references/test-case/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/api-references/test-case/</guid><description>
+&lt;p>A &lt;strong>test case&lt;/strong> describes a single HTTP operation. Only &lt;code>name&lt;/code> and &lt;code>endpoint&lt;/code> are required. All other fields are optional and mirror the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Request" target="_blank" rel="noopener">&lt;code>fetch&lt;/code> Request&lt;/a> and &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Response" target="_blank" rel="noopener">&lt;code>Response&lt;/code>&lt;/a> objects.&lt;/p>
+&lt;h3>Properties&lt;span class="hx-absolute -hx-mt-20" id="properties">&lt;/span>
+&lt;a href="#properties" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Key&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>name&lt;/code>&lt;/td>
+&lt;td>Human readable test name&lt;/td>
+&lt;td>required&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>operationId&lt;/code>&lt;/td>
+&lt;td>Unique identifier for the operation&lt;/td>
+&lt;td>&lt;code>name&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>phase&lt;/code>&lt;/td>
+&lt;td>Execution phase (&lt;code>setup&lt;/code>, &lt;code>main&lt;/code>, or &lt;code>teardown&lt;/code>)&lt;/td>
+&lt;td>&lt;code>main&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>dependsOn&lt;/code>&lt;/td>
+&lt;td>Array of operationId strings that must pass first&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>endpoint&lt;/code>&lt;/td>
+&lt;td>Request path relative to the base URL&lt;/td>
+&lt;td>required&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>request.method&lt;/code>&lt;/td>
+&lt;td>HTTP method&lt;/td>
+&lt;td>&lt;code>GET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>request.headers&lt;/code>&lt;/td>
+&lt;td>Additional request headers&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>request.body&lt;/code>&lt;/td>
+&lt;td>Request payload&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>request.credentials&lt;/code>&lt;/td>
+&lt;td>Fetch &lt;code>credentials&lt;/code> mode; &lt;code>'include'&lt;/code> reuses the session cookie captured from an earlier response in the run&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>request.*&lt;/code>&lt;/td>
+&lt;td>Any other valid fetch Request option&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>response.status&lt;/code>&lt;/td>
+&lt;td>Expected HTTP status&lt;/td>
+&lt;td>&lt;code>200&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>response.json&lt;/code>&lt;/td>
+&lt;td>Expected partial JSON body&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>response.schema&lt;/code>&lt;/td>
+&lt;td>Zod or JSON schema to validate response&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>response.headers&lt;/code>&lt;/td>
+&lt;td>Expected response headers&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>response.*&lt;/code>&lt;/td>
+&lt;td>Other fetch Response fields&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>beforeSend(req, state)&lt;/code>&lt;/td>
+&lt;td>Function to finalize the request&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>postTest(res, state, ctx)&lt;/code>&lt;/td>
+&lt;td>Function called after the response&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tags&lt;/code>&lt;/td>
+&lt;td>Tags used with &lt;code>--tags&lt;/code> filtering&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>skip&lt;/code>&lt;/td>
+&lt;td>Skip this test&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>focus&lt;/code>&lt;/td>
+&lt;td>Run only focused tests when present&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repeat&lt;/code>&lt;/td>
+&lt;td>Extra sequential runs of the test&lt;/td>
+&lt;td>&lt;code>0&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>bombard&lt;/code>&lt;/td>
+&lt;td>Additional simultaneous runs of the test&lt;/td>
+&lt;td>&lt;code>0&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>delay&lt;/code>&lt;/td>
+&lt;td>Milliseconds to wait before running&lt;/td>
+&lt;td>none&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>timeout&lt;/code>&lt;/td>
+&lt;td>Per‑test timeout override&lt;/td>
+&lt;td>runtime &lt;code>timeout&lt;/code> (&lt;code>60000&lt;/code>ms)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>recording&lt;/code>&lt;/td>
+&lt;td>Per‑test HTTP recording mode override (&lt;code>off&lt;/code>, &lt;code>replay&lt;/code>, or &lt;code>record&lt;/code>)&lt;/td>
+&lt;td>runtime &lt;code>recording&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>Example&lt;span class="hx-absolute -hx-mt-20" id="example">&lt;/span>
+&lt;a href="#example" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Create a post&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/posts&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">request&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">headers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/json&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">userId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">response&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">status&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">201&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">json&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">101&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">userId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>If the server returns &lt;code>201&lt;/code> with a matching body the case passes. Any mismatched status or body value results in a failure.&lt;/p>
+&lt;h3>Validating with &lt;code>response.schema&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="validating-with-responseschema">&lt;/span>
+&lt;a href="#validating-with-responseschema" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>response.schema&lt;/code> accepts either a Zod schema (detected via &lt;code>.safeParse&lt;/code>) or a raw JSON Schema / OpenAPI 3.0/3.1 Schema Object, validated directly — no &lt;code>__spectestJsonSchema&lt;/code> wrapper needed. OpenAPI-only keywords (&lt;code>nullable&lt;/code>, &lt;code>example&lt;/code>, &lt;code>examples&lt;/code>, &lt;code>discriminator&lt;/code>, etc.) and 3.0-style boolean &lt;code>exclusiveMinimum&lt;/code>/&lt;code>exclusiveMaximum&lt;/code> are normalized before validation against a shared Ajv2020 instance, so schemas copied straight out of an OpenAPI document work unmodified.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// JSON Schema / OpenAPI Schema Object
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Get user&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/users/1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">response&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">status&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">schema&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">properties&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">format&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;uuid&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">email&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">format&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;email&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">required&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;email&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">additionalProperties&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Zod
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">z&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;zod&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Get user&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">endpoint&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;/users/1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">response&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">status&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">schema&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">z&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">object&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">z&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">string&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">uuid&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="nx">email&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">z&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">string&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">email&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">}),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Phases&lt;span class="hx-absolute -hx-mt-20" id="phases">&lt;/span>
+&lt;a href="#phases" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Tests run in three waves: &lt;code>setup&lt;/code> → &lt;code>main&lt;/code> → &lt;code>teardown&lt;/code>. &lt;code>phase&lt;/code> is syntactic sugar for &lt;code>dependsOn&lt;/code> — every &lt;code>setup&lt;/code> test implicitly blocks every &lt;code>main&lt;/code> test, and every &lt;code>main&lt;/code> test implicitly blocks every &lt;code>teardown&lt;/code> test, without listing operationIds by hand. Within a phase, tests still run concurrently as soon as their explicit &lt;code>dependsOn&lt;/code> prerequisites pass.&lt;/p>
+&lt;p>See &lt;a href="/docs/introduction/helpers/" >Helpers&lt;/a> for utilities that modify multiple cases at once.&lt;/p></description></item></channel></rss>

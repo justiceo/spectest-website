@@ -1,0 +1,34 @@
+{{/*
+  Testimonial quote cards. Usage: {{< testimonials >}}
+  NOTE: These are illustrative placeholder quotes. Replace with real, attributed
+  testimonials before presenting them as genuine customer feedback.
+*/}}
+{{- $items := slice
+  (dict
+    "quote" "We deleted 2,000 lines of supertest glue and replaced it with declarative Spectest suites. CI got faster and our tests finally read like documentation."
+    "name" "Staff Engineer" "role" "Fintech platform team")
+  (dict
+    "quote" "OpenAPI-native execution means our spec is the test. If the API drifts from the contract, Spectest catches it before it ships."
+    "name" "API Lead" "role" "Developer tools startup")
+  (dict
+    "quote" "Record-and-replay made our flaky integration tests deterministic overnight. It's the first testing tool the whole team actually enjoys using."
+    "name" "Engineering Manager" "role" "B2B SaaS")
+-}}
+
+<section class="st-testimonials">
+  <div class="st-testimonials-grid">
+    {{- range $items }}
+    <figure class="st-quote-card not-prose">
+      <div class="st-quote-stars" aria-hidden="true">★★★★★</div>
+      <blockquote class="st-quote-text">"{{ .quote }}"</blockquote>
+      <figcaption class="st-quote-meta">
+        <span class="st-quote-avatar" aria-hidden="true">{{ substr .name 0 1 }}</span>
+        <span class="st-quote-person">
+          <span class="st-quote-name">{{ .name }}</span>
+          <span class="st-quote-role">{{ .role }}</span>
+        </span>
+      </figcaption>
+    </figure>
+    {{- end }}
+  </div>
+</section>

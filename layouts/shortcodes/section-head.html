@@ -1,0 +1,12 @@
+{{/*
+  Centered section heading with eyebrow + subtitle.
+  Usage: {{< section-head eyebrow="..." title="..." subtitle="..." >}}
+*/}}
+{{- $eyebrow := .Get "eyebrow" -}}
+{{- $title := .Get "title" -}}
+{{- $subtitle := .Get "subtitle" -}}
+<div class="st-section-head">
+  {{- with $eyebrow }}<span class="st-section-eyebrow">{{ . }}</span>{{ end }}
+  <h2 class="st-section-title">{{ $title }}</h2>
+  {{- with $subtitle }}<p class="st-section-subtitle">{{ . }}</p>{{ end }}
+</div>
